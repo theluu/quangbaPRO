@@ -1,0 +1,44 @@
+{
+    "message": "success!",
+    "data": {
+        "title": "Mỗi mục tiêu một chiến lược",
+        "description": "Với mỗi mục tiêu của bạn <strong>Quangbapro</strong> sẽ xây dựng một chiến lược cụ thể với hình thức quảng cáo và chỉ số đo lường khác nhau",
+        "image": "google-ads-strategies-illustration.png",
+        "strategies": [
+            {
+                "id": 1,
+                "title": "Mục tiêu thương hiệu",
+                "subtitle": "Chỉ số đo lường:",
+                "icon": "ads-1.png",
+                "metrics": [
+                    "Lượt hiển thị",
+                    "Lượt xem video",
+                    "Lượt tương tác quảng cáo",
+                    "Tần suất hiển thị"
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Mục tiêu bán hàng",
+                "subtitle": "Chỉ số đo lường:",
+                "icon": "ads-2.png",
+                "metrics": [
+                    "CPC, lượt truy cập website",
+                    "CPA",
+                    "Lượt chuyển đổi",
+                    "ROAS",
+                    "Doanh thu"
+                ]
+            }
+        ],
+        "socialProof": {
+            "count": "600+",
+            "text": "Khách hàng tin tưởng sử dụng",
+            "avatars": [
+                "avatar-1.png",
+                "avatar-2.png",
+                "avatar-3.png"
+            ]
+        }
+    }
+}

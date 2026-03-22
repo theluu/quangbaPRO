@@ -1,0 +1,22 @@
+{
+    "message": "success!",
+    "data": {
+        "title": "Tại sao cần thiết kế website cho doanh nghiệp của mình?",
+        "content": "<h3>🌐 1. Khẳng định thương hiệu & uy tín chuyên nghiệp</h3><p>Website là \"bộ mặt số\" của doanh nghiệp. Một website được thiết kế chuyên nghiệp giúp khách hàng:</p><ul><li>Dễ dàng nhận diện thương hiệu</li><li>Tăng niềm tin và sự chuyên nghiệp</li><li>Tạo ấn tượng đầu tiên tích cực khi họ tìm hiểu về doanh nghiệp bạn</li></ul><h3>🧭 2. Kênh thông tin chính thức – luôn hoạt động 24/7</h3><p>Website giúp doanh nghiệp truyền tải đầy đủ thông tin sản phẩm, dịch vụ, tầm nhìn, sứ mệnh, liên hệ mà không phụ thuộc vào mạng xã hội. Khách hàng có thể tìm thấy bạn mọi lúc, mọi nơi, ngay cả khi bạn không online.</p><h3>💼 3. Hỗ trợ kinh doanh & marketing hiệu quả</h3><p>Website là nền tảng để triển khai các hoạt động quảng cáo, SEO, Google Ads, bán hàng trực tuyến, hay thu thập dữ liệu khách hàng. Đây là công cụ giúp doanh nghiệp tiếp cận khách hàng tiềm năng với chi phí tối ưu.</p><h3>📱 4. Nâng cao trải nghiệm khách hàng</h3><p>Một website chuẩn UX/UI giúp khách hàng dễ dàng tìm kiếm thông tin, đặt hàng hoặc liên hệ, qua đó tăng tỉ lệ chuyển đổi và doanh thu.</p><h3>🚀 5. Thúc đẩy chuyển đổi số và mở rộng thị trường</h3><p>Trong thời đại số, website là nền tảng quan trọng để doanh nghiệp:</p><ul><li>Tích hợp các hệ thống bán hàng, CRM, thanh toán, chăm sóc khách hàng,...</li><li>Mở rộng quy mô kinh doanh vượt khỏi giới hạn địa lý.</li></ul>",
+        "share": {
+            "label": "Chia sẻ",
+            "socials": [
+                {
+                    "id": "facebook",
+                    "icon": "fa-brands fa-facebook-f",
+                    "url": "#"
+                },
+                {
+                    "id": "linkedin",
+                    "icon": "fa-brands fa-linkedin-in",
+                    "url": "#"
+                }
+            ]
+        }
+    }
+}

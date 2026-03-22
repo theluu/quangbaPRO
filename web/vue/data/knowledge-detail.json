@@ -1,0 +1,138 @@
+{
+    "data": {
+        "id": 1,
+        "title": "Perplexity là gì? 8 tính năng thông minh cần biết",
+        "author": "Hoàng Quyên",
+        "publishDate": "25/10/2024 16:00",
+        "comments": 125,
+        "intro": "<strong>Perplexity AI là một công cụ tìm kiếm đắc lực</strong>, hoạt động dựa trên trí tuệ nhân tạo, mang đến cho người dùng những câu trả lời chính xác, chi tiết và có trích dẫn nguồn rõ ràng. Không chỉ dừng lại ở việc cung cấp thông tin, Perplexity còn sở hữu nhiều tính năng thông minh hỗ trợ tối đa cho quá trình nghiên cứu và tìm kiếm.",
+        "hightLineConent": {
+            "title": "Nội dung chính của bài viết này bao gồm:",
+            "content": [
+                "Đăng ký tài khoản và làm quen với giao diện Perplexity.",
+                "Sử dụng Perplexity ở mức cơ bản cho người mới bắt đầu.",
+                "Khai thác tính năng nâng cao như Contextual Memory, Focus Modes, Attachment, Spaces,…",
+                "Nắm các mẹo, lưu ý để tối ưu trải nghiệm.",
+                "Giải đáp một số câu hỏi xoay quanh việc sử dụng Perplexity."
+            ]
+        },
+        "toc": [
+            {
+                "id": "1",
+                "text": "1. Perplexity là gì?",
+                "children": [
+                    {
+                        "id": "1-1",
+                        "text": "1.1. Khái niệm cơ bản"
+                    },
+                    {
+                        "id": "1-2",
+                        "text": "1.2. Sự khác biệt"
+                    }
+                ]
+            },
+            {
+                "id": "2",
+                "text": "2. Cách hoạt động của Perplexity"
+            },
+            {
+                "id": "3",
+                "text": "3. Những tính năng nổi bật của Perplexity",
+                "children": [
+                    {
+                        "id": "3-1",
+                        "text": "3.1. Tìm kiếm và Trả lời"
+                    }
+                ]
+            },
+            {
+                "id": "4",
+                "text": "4. Perplexity có miễn phí không?"
+            },
+            {
+                "id": "5",
+                "text": "5. Sử dụng Perplexity để làm gì?"
+            }
+        ],
+        "content": [
+            {
+                "type": "heading",
+                "id": "1",
+                "text": "1. Perplexity là gì?"
+            },
+            {
+                "type": "text",
+                "text": "Perplexity AI là một công cụ tìm kiếm hội thoại được hỗ trợ bởi AI, nơi bạn có thể đặt câu hỏi bằng ngôn ngữ tự nhiên và nhận được câu trả lời chi tiết, có chú thích trích dẫn nguồn từ các trang web uy tín. Công cụ này sử dụng các mô hình ngôn ngữ lớn (LLM) để hiểu và xử lý thông tin, mang lại trải nghiệm tìm kiếm mượt mà và chính xác."
+            },
+            {
+                "type": "subheading",
+                "id": "1-1",
+                "text": "1.1. Khái niệm cơ bản"
+            },
+            {
+                "type": "text",
+                "text": "Perplexity không chỉ là một công cụ tìm kiếm mà còn là một trợ lý ảo thông minh, giúp bạn tổng hợp thông tin từ nhiều nguồn khác nhau một cách nhanh chóng."
+            },
+            {
+                "type": "subheading",
+                "id": "1-2",
+                "text": "1.2. Sự khác biệt"
+            },
+            {
+                "type": "text",
+                "text": "Điểm khác biệt lớn nhất của Perplexity so với các công cụ truyền thống là khả năng hiểu ngữ cảnh và đưa ra câu trả lời trực tiếp thay vì danh sách các đường link."
+            },
+            {
+                "type": "image",
+                "src": "detail-1.png",
+                "alt": "Perplexity AI workspace"
+            },
+            {
+                "type": "heading",
+                "id": "2",
+                "text": "2. Cách hoạt động của Perplexity"
+            },
+            {
+                "type": "text",
+                "text": "Perplexity hoạt động bằng cách sử dụng LLM để đọc và hiểu ý định của người dùng, sau đó tìm kiếm thông tin từ nhiều nguồn khác nhau trên internet. Thay vì chỉ trả về một danh sách các liên kết, Perplexity tổng hợp thông tin và viết thành một câu trả lời hoàn chỉnh, dễ hiểu."
+            },
+            {
+                "type": "heading",
+                "id": "3",
+                "text": "3. Những tính năng nổi bật của Perplexity"
+            },
+            {
+                "type": "subheading",
+                "id": "3-1",
+                "text": "3.1. Tìm kiếm và Trả lời"
+            },
+            {
+                "type": "text",
+                "text": "Đây là tính năng cốt lõi của Perplexity. Bạn có thể đặt câu hỏi về bất kỳ chủ đề nào, và Perplexity sẽ cung cấp câu trả lời tổng hợp từ nhiều nguồn đáng tin cậy. Điểm đặc biệt là mỗi thông tin đều có kèm theo link nguồn, giúp bạn dễ dàng kiểm chứng."
+            },
+            {
+                "type": "image",
+                "src": "detail-2.png",
+                "alt": "Tính năng tìm kiếm"
+            },
+            {
+                "type": "heading",
+                "id": "4",
+                "text": "4. Perplexity có miễn phí không?"
+            },
+            {
+                "type": "text",
+                "text": "Perplexity cung cấp cả phiên bản miễn phí và trả phí. Phiên bản miễn phí cho phép bạn sử dụng hầu hết các tính năng cơ bản, trong khi phiên bản Pro mang đến khả năng truy cập vào các mô hình AI mạnh mẽ hơn như GPT-4 hay Claude 3, cùng nhiều tiện ích nâng cao khác."
+            },
+            {
+                "type": "heading",
+                "id": "5",
+                "text": "5. Sử dụng Perplexity để làm gì?"
+            },
+            {
+                "type": "text",
+                "text": "Người dùng có thể sử dụng Perplexity cho nhiều mục đích khác nhau như: nghiên cứu học thuật, tìm kiếm thông tin thị trường, lên ý tưởng nội dung, giải đáp thắc mắc thường ngày, và nhiều hơn nữa."
+            }
+        ]
+    }
+}

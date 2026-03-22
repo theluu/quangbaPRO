@@ -1,0 +1,69 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "src": "img-theme-1.png",
+      "alt": "Theme 1",
+      "title": "Mẫu website thời trang 01",
+      "price": "3,500,000 VND",
+      "link": "#"
+    },
+    {
+      "id": 2,
+      "src": "img-theme-2.png",
+      "alt": "Theme 2",
+      "title": "Mẫu website thời trang 02",
+      "price": "4,000,000 VND",
+      "link": "#"
+    },
+    {
+      "id": 3,
+      "src": "img-theme-3.png",
+      "alt": "Theme 3",
+      "title": "Mẫu website thời trang 03",
+      "price": "4,500,000 VND",
+      "link": "#"
+    },
+    {
+      "id": 4,
+      "src": "img-theme-4.png",
+      "alt": "Theme 4",
+      "title": "Mẫu website thời trang 04",
+      "price": "5,000,000 VND",
+      "link": "#"
+    },
+    {
+      "id": 5,
+      "src": "img-theme-5.png",
+      "alt": "Theme 5",
+      "title": "Mẫu website thời trang 05",
+      "price": "5,500,000 VND",
+      "link": "#"
+    },
+    {
+      "id": 6,
+      "src": "img-theme-6.png",
+      "alt": "Theme 6",
+      "title": "Mẫu website thời trang 06",
+      "price": "6,000,000 VND",
+      "link": "#"
+    },
+    {
+      "id": 7,
+      "src": "img-theme-7.png",
+      "alt": "Theme 7",
+      "title": "Mẫu website thời trang 07",
+      "price": "6,500,000 VND",
+      "link": "#"
+    },
+    {
+      "id": 8,
+      "src": "img-theme-8.png",
+      "alt": "Theme 8",
+      "title": "Mẫu website thời trang 08",
+      "price": "7,000,000 VND",
+      "link": "#"
+    }
+  ]
+}

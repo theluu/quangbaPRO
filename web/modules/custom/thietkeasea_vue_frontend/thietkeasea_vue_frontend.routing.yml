@@ -1,0 +1,7 @@
+thietkeasea_vue_frontend.app:
+  path: '/dashboard-vue'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_frontend\Controller\VueAppController::build'
+    _title: 'Vue App'
+  requirements:
+    _permission: 'access content'

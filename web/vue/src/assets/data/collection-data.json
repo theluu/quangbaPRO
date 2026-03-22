@@ -1,0 +1,207 @@
+{
+  "all-collection": [
+    {
+      "id": 1,
+      "demo": true,
+      "imageSrc": "demo-collection-card-img.jpg",
+      "title": "Demo",
+      "buttonText": "TAKE TEST",
+      "buttonClass": "-orange",
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "imageSrc": "collection-card-img.jpg",
+      "title": "IELTS Practice",
+      "caption": "Test 1",
+      "testTaken": "1,130,522 tests taken",
+      "buttonText": "TAKE TEST",
+      "buttonClass": "-orange",
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "imageSrc": "collection-card-img-pro.jpg",
+      "title": "IELTS Practice",
+      "caption": "Test 3",
+      "code": "Code: 34Getnau",
+      "testTaken": "1,130,522 tests taken",
+      "percentValue": 75,
+      "buttonText": "CONTINUE",
+      "buttonClass": "-green",
+      "status": "taking_test"
+    },
+    {
+      "id": 4,
+      "imageSrc": "collection-card-img-pro.jpg",
+      "title": "IELTS Practice",
+      "caption": "Practice Test 5",
+      "code": "Code: 986hsgfJ",
+      "score": "7.5",
+      "testTaken": "1,130,522 tests taken",
+      "buttonText": "RETAKE",
+      "buttonClass": "",
+      "status": "completed"
+    },
+    {
+      "id": 5,
+      "imageSrc": "collection-card-img-pro.jpg",
+      "title": "IELTS 4 Skill",
+      "caption": "Practice Test 5",
+      "testTaken": "1,130,522 tests taken",
+      "buttonText": "Buy Now",
+      "buttonClass": "-pink",
+      "status": ""
+    },
+    {
+      "id": 6,
+      "imageSrc": "collection-card-img.jpg",
+      "title": "IELTS Practice",
+      "caption": "Test 2",
+      "testTaken": "1,130,522 tests taken",
+      "buttonText": "TAKE TEST",
+      "buttonClass": "-orange",
+      "status": "pending"
+    },
+    {
+      "id": 7,
+      "imageSrc": "collection-card-img.jpg",
+      "title": "IELTS Practice",
+      "caption": "Test 1",
+      "testTaken": "1,130,522 tests taken",
+      "buttonText": "TAKE TEST",
+      "buttonClass": "-orange",
+      "status": "pending"
+    },
+    {
+      "id": 8,
+      "imageSrc": "collection-card-img.jpg",
+      "title": "IELTS Practice",
+      "caption": "Test 1",
+      "testTaken": "1,130,522 tests taken",
+      "buttonText": "TAKE TEST",
+      "buttonClass": "-orange",
+      "status": "pending"
+    },
+    {
+      "id": 9,
+      "imageSrc": "collection-card-img.jpg",
+      "title": "IELTS Practice",
+      "caption": "Test 1",
+      "testTaken": "1,130,522 tests taken",
+      "buttonText": "TAKE TEST",
+      "buttonClass": "-orange",
+      "status": "pending"
+    },
+    {
+      "id": 10,
+      "imageSrc": "collection-card-img-pro.jpg",
+      "title": "IELTS Practice",
+      "caption": "Test 3",
+      "code": "Code: 34Getnau",
+      "testTaken": "1,130,522 tests taken",
+      "percentValue": 50,
+      "buttonText": "CONTINUE",
+      "buttonClass": "-green",
+      "status": "taking_test"
+    },
+    {
+      "id": 11,
+      "imageSrc": "collection-card-img-pro.jpg",
+      "title": "IELTS Practice",
+      "caption": "Practice Test 5",
+      "code": "Code: 986hsgfJ",
+      "score": "8.0",
+      "testTaken": "1,130,522 tests taken",
+      "buttonText": "RETAKE",
+      "buttonClass": "",
+      "status": "completed"
+    },
+    {
+      "id": 12,
+      "imageSrc": "collection-card-img-pro.jpg",
+      "title": "IELTS 4 Skill",
+      "caption": "Practice Test 5",
+      "testTaken": "1,130,522 tests taken",
+      "buttonText": "Buy Now",
+      "buttonClass": "-pink",
+      "status": ""
+    }
+  ],
+  "my-test": [
+    {
+      "id": 13,
+      "demo": true,
+      "imageSrc": "demo-collection-card-img.jpg",
+      "title": "Demo",
+      "buttonText": "TAKE TEST",
+      "buttonClass": "-orange",
+      "status": "pending"
+    },
+    {
+      "id": 14,
+      "imageSrc": "collection-card-img.jpg",
+      "title": "IELTS Academic",
+      "caption": "My Test 1",
+      "testTaken": "500,000 tests taken",
+      "buttonText": "TAKE TEST",
+      "buttonClass": "-orange",
+      "status": "pending"
+    },
+    {
+      "id": 15,
+      "imageSrc": "collection-card-img-pro.jpg",
+      "title": "IELTS Academic",
+      "caption": "My Test 2",
+      "code": "Code: My123Test",
+      "testTaken": "500,000 tests taken",
+      "percentValue": 60,
+      "buttonText": "CONTINUE",
+      "buttonClass": "-green",
+      "status": "taking_test"
+    },
+    {
+      "id": 16,
+      "imageSrc": "collection-card-img-pro.jpg",
+      "title": "IELTS Academic",
+      "caption": "My Test 3",
+      "code": "Code: My456Test",
+      "score": "6.5",
+      "testTaken": "500,000 tests taken",
+      "buttonText": "RETAKE",
+      "buttonClass": "",
+      "status": "completed"
+    },
+    {
+      "id": 17,
+      "imageSrc": "collection-card-img-pro.jpg",
+      "title": "IELTS Academic 4 Skill",
+      "caption": "My Test 4",
+      "testTaken": "500,000 tests taken",
+      "buttonText": "Buy Now",
+      "buttonClass": "-pink",
+      "status": ""
+    },
+    {
+      "id": 18,
+      "imageSrc": "collection-card-img-pro.jpg",
+      "title": "IELTS Academic",
+      "caption": "My Test 5",
+      "code": "Code: Exp789Test",
+      "testTaken": "500,000 tests taken",
+      "buttonText": "VIEW",
+      "buttonClass": "-gray",
+      "status": "expired"
+    },
+    {
+      "id": 19,
+      "imageSrc": "collection-card-img.jpg",
+      "title": "IELTS Academic",
+      "caption": "My Test 6",
+      "testTaken": "500,000 tests taken",
+      "buttonText": "VIEW",
+      "buttonClass": "-gray",
+      "status": "expired"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "data": {
+    "heading": {
+      "title": "ĐĂNG KÝ",
+      "highlight": "TƯ VẤN MIỄN PHÍ"
+    },
+    "form": {
+      "fields": [
+        {
+          "name": "fullname",
+          "label": "Họ tên của bạn",
+          "placeholder": "Họ tên của bạn *",
+          "type": "text",
+          "required": true,
+          "width": "half"
+        },
+        {
+          "name": "phone",
+          "label": "Số điện thoại",
+          "placeholder": "Số điện thoại *",
+          "type": "tel",
+          "required": true,
+          "width": "half"
+        },
+        {
+          "name": "address",
+          "label": "Địa chỉ",
+          "placeholder": "Địa chỉ của bạn",
+          "type": "text",
+          "required": false,
+          "width": "half"
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "placeholder": "Email",
+          "type": "email",
+          "required": false,
+          "width": "half"
+        },
+        {
+          "name": "message",
+          "label": "Lĩnh vực, ghi chú",
+          "placeholder": "Lĩnh vực, ghi chú",
+          "type": "textarea",
+          "required": false,
+          "width": "full"
+        }
+      ],
+      "submitText": "ĐĂNG KÝ"
+    }
+  }
+}

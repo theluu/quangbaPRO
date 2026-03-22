@@ -1,0 +1,41 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "src": "wp-featured-icon-1.png",
+      "title": "Dễ dàng tùy biến",
+      "desc": "Aliquet pretium dictum fames id eget ut a morbi amet. Tellus et aliquam pellentesque elementum placerat ultrices."
+    },
+    {
+      "id": 2,
+      "src": "wp-featured-icon-2.png",
+      "title": "Giao diện đẹp, chuẩn SEO",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Est nibh lacus ullamcorper lectus cras nisi senectus quam non. "
+    },
+    {
+      "id": 3,
+      "src": "wp-featured-icon-3.png",
+      "title": "Tiết kiệm chi phí",
+      "desc": "Sit posuere nunc lorem congue at in massa vulputate. Pellentesque at tempus hendrerit nec in ut in orci. "
+    },
+    {
+      "id": 43,
+      "src": "wp-featured-icon-4.png",
+      "title": "Nhiều ưu đãi, tích điểm",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Ornare est pretium cras rhoncus. Tempor dolor laoreet sollicitudin facilisi interdum quis."
+    },
+    {
+      "id": 5,
+      "src": "wp-featured-icon-5.png",
+      "title": "Thanh toán tiện lợi",
+      "desc": "Eget feugiat quis integer nullam phasellus in sapien enim eget. Eget facilisis sem massa ante proin facilisi aliquet orci."
+    },
+    {
+      "id": 6,
+      "src": "wp-featured-icon-6.png",
+      "title": "Hỗ trợ miễn phí",
+      "desc": "Dolor sit amet consectetur. Cursus sit neque mattis quis. Sem etiam at neque sed condimentum. Ut vulputate tellus nunc tellus in."
+    }
+  ]
+}

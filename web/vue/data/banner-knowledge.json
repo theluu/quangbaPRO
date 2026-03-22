@@ -1,0 +1,10 @@
+{
+    "message": "success",
+    "data": [
+        {
+            "id": 1,
+            "image": "banner.png",
+            "title": "Banner Knowledge"
+        }
+    ]
+}

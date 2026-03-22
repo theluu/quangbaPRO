@@ -1,0 +1,203 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+body {
+  font-size: 16px;
+  font-family: $font-family;
+  color: $dark-1;
+}
+
+a {
+  color: $text-link;
+  text-decoration: none;
+
+  &:hover {
+    color: $text-link-hover;
+  }
+}
+
+.btn {
+  min-height: 44px;
+  font-weight: 600;
+
+  .btn-icon {
+    margin-right: 4px;
+  }
+}
+
+.btn-custom {
+  padding: 12px 24px;
+  line-height: 22px;
+  font-size: 16px;
+
+  i {
+    font-size: 18px;
+    margin-right: 4px;
+  }
+}
+
+.btn-primary-color {
+  border-color: $primary-1;
+  background-color: $primary-1;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    border-color: lighten($color: $primary-1, $amount: 5%);
+    background-color: lighten($color: $primary-1, $amount: 5%);
+    color: $white;
+  }
+}
+
+.btn-warning-color {
+  border-color: $danger-3;
+  background-color: $danger-3;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    border-color: lighten($color: $danger-3, $amount: 5%);
+    background-color: lighten($color: $danger-3, $amount: 5%);
+    color: $white;
+  }
+}
+
+.btn-green-color {
+  border-color: $green-1;
+  background-color: $green-1;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    border-color: lighten($color: $green-1, $amount: 5%);
+    background-color: lighten($color: $green-1, $amount: 5%);
+    color: $white;
+  }
+}
+
+.btn-danger-color {
+  border-color: $danger-2;
+  background-color: $danger-2;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    border-color: lighten($color: $danger-2, $amount: 5%);
+    background-color: lighten($color: $danger-2, $amount: 5%);
+    color: $white;
+  }
+}
+
+.btn-clear {
+  border: none;
+  padding: 0;
+  background-color: 0;
+}
+
+[class*='ico-'] {
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.ico-shake-hand {
+  background-image: url(../assets/images/icons/shake-hand.svg);
+  width: 22px;
+  height: 20px;
+}
+
+.ico-global {
+  background-image: url(../assets/images/icons/global.svg);
+  width: 22px;
+  height: 22px;
+}
+
+.ico-blogger {
+  background-image: url(../assets/images/icons/blogger.svg);
+  width: 22px;
+  height: 22px;
+}
+
+.ico-receipt-search {
+  background-image: url(../assets/images/icons/receipt-search.svg);
+  width: 22px;
+  height: 22px;
+}
+
+.ico-global-search {
+  background-image: url(../assets/images/icons/global-search.svg);
+  width: 22px;
+  height: 22px;
+}
+
+.ico-slider-horizontal {
+  background-image: url(../assets/images/icons/slider-horizontal.svg);
+  width: 24px;
+  height: 24px;
+}
+
+.ico-check-circle {
+  background-image: url(../assets/images/icons/check-circle.svg);
+  width: 20px;
+  height: 20px;
+}
+
+.ico-sms-tracking {
+  background-image: url(../assets/images/icons/sms-tracking.svg);
+  width: 24px;
+  height: 24px;
+}
+
+.ico-message-favorite {
+  background-image: url(../assets/images/icons/message-favorite.svg);
+  width: 24px;
+  height: 24px;
+}
+
+.ico-news {
+  background-image: url(../assets/images/icons/news.svg);
+  width: 24px;
+  height: 24px;
+}
+
+.ico-messenger {
+  background-image: url(../assets/images/icons/messenger.svg);
+  width: 20px;
+  height: 20px;
+}
+
+.ico-sms {
+  background-image: url(../assets/images/icons/sms.svg);
+  width: 20px;
+  height: 20px;
+  background-size: 100% 100%;
+}
+
+.bg-grey-1 {
+  background-color: $grey-1;
+}
+
+.section-pad {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  @include breakpoint(md) {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
+
+.text-primary-color {
+  color: $primary-1;
+}
+
+.text-danger-color {
+  color: $danger-1;
+}
+
+.text-danger-color-2 {
+  color: $danger-2;
+}
+
+img {
+  max-width: 100%;
+}

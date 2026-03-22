@@ -1,0 +1,26 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "src": "news-1.png",
+      "title": "Metus dictum fermentum tellus suspen disse libero pellentesque magna.",
+      "createdDate": "17/09/2025",
+      "desc": "Nulla faucibus felis accumsan ultricies fermentum velit. Integer facilisis fermentum cras ut dolor vitae."
+    },
+    {
+      "id": 2,
+      "src": "news-2.png",
+      "title": "Metus dictum fermentum tellus suspen disse libero pellentesque magna.",
+      "createdDate": "17/09/2025",
+      "desc": "Nulla faucibus felis accumsan ultricies fermentum velit. Integer facilisis fermentum cras ut dolor vitae."
+    },
+    {
+      "id": 3,
+      "src": "news-3.png",
+      "title": "Metus dictum fermentum tellus suspen disse libero pellentesque magna.",
+      "createdDate": "17/09/2025",
+      "desc": "Nulla faucibus felis accumsan ultricies fermentum velit. Integer facilisis fermentum cras ut dolor vitae."
+    }
+  ]
+}

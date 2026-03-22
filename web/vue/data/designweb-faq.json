@@ -1,0 +1,55 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "question": "Thời gian hoàn thành website là bao lâu?",
+      "answer": "Thời gian thiết kế website tùy thuộc vào độ phức tạp của dự án. Thông thường, một website cơ bản mất khoảng 2-3 tuần, website phức tạp có thể mất từ 4-8 tuần. Chúng tôi sẽ tư vấn cụ thể sau khi nhận yêu cầu của bạn."
+    },
+    {
+      "id": 2,
+      "question": "Website của tôi có tương thích với tất cả thiết bị không?",
+      "answer": "Chi phí thiết kế website phụ thuộc vào nhiều yếu tố như tính năng, giao diện, số lượng trang... Mức giá dao động từ 10-50 triệu đồng. Liên hệ với chúng tôi để được báo giá chi tiết và chính xác nhất."
+    },
+    {
+      "id": 3,
+      "question": "Tôi cần làm gì trước khi bước vào triển khai dự án?",
+      "answer": "Có, khách hàng được sở hữu toàn bộ mã nguồn website sau khi hoàn thành và thanh toán đầy đủ. Chúng tôi sẽ bàn giao file source code, database và hướng dẫn chi tiết."
+    },
+    {
+      "id": 4,
+      "question": "Sau khi website hoàn thiện, tôi có được hỗ trợ thêm không?",
+      "answer": "Tất cả website do chúng tôi thiết kế đều được tối ưu SEO cơ bản bao gồm: cấu trúc URL thân thiện, tối ưu tốc độ tải, responsive mobile, meta tags, sitemap... Chúng tôi cũng cung cấp gói SEO chuyên sâu nếu bạn muốn."
+    },
+    {
+      "id": 5,
+      "question": "Website của tôi có được backup thường xuyên không?",
+      "answer": "Chúng tôi cung cấp gói bảo hành và hỗ trợ miễn phí trong 12 tháng đầu, bao gồm: sửa lỗi phát sinh, hướng dẫn sử dụng, cập nhật nội dung cơ bản. Sau đó, bạn có thể gia hạn gói bảo trì hoặc liên hệ khi cần hỗ trợ."
+    },
+    {
+      "id": 6,
+      "question": "Có phát sinh chi phí nào ngoài báo giá không?",
+      "answer": "Chúng tôi áp dụng hình thức thanh toán theo giai đoạn: 50% khi ký hợp đồng, 30% khi hoàn thành giao diện, 20% khi bàn giao website. Điều này đảm bảo quyền lợi cho cả hai bên."
+    },
+    {
+      "id": 7,
+      "question": "Website có tương thích với mọi trình duyệt không?",
+      "answer": "Website của chúng tôi được test và đảm bảo tương thích với tất cả các trình duyệt phổ biến như Chrome, Firefox, Safari, Edge... cũng như các phiên bản mobile của chúng."
+    },
+    {
+      "id": 8,
+      "question": "Website của tôi được bảo mật như thế nào?",
+      "answer": "Trong quá trình thiết kế, bạn có thể yêu cầu chỉnh sửa miễn phí. Sau khi đã phê duyệt và chuyển sang giai đoạn code, việc thay đổi giao diện sẽ phát sinh thêm chi phí tùy theo mức độ thay đổi."
+    },
+    {
+      "id": 9,
+      "question": "Tôi có thể tự cập nhật nội dung trên website không?",
+      "answer": "Trong quá trình thiết kế, bạn có thể yêu cầu chỉnh sửa miễn phí. Sau khi đã phê duyệt và chuyển sang giai đoạn code, việc thay đổi giao diện sẽ phát sinh thêm chi phí tùy theo mức độ thay đổi."
+    },
+    {
+      "id": 10,
+      "question": "Thời gian bảo hành website là bao lâu?",
+      "answer": "Trong quá trình thiết kế, bạn có thể yêu cầu chỉnh sửa miễn phí. Sau khi đã phê duyệt và chuyển sang giai đoạn code, việc thay đổi giao diện sẽ phát sinh thêm chi phí tùy theo mức độ thay đổi."
+    }
+  ]
+}

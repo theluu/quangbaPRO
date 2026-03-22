@@ -1,0 +1,16 @@
+.DS_Store
+vendor/
+
+# Drupal runtime/local files
+web/sites/*/files/
+web/sites/*/private/
+web/sites/*/settings.local.php
+web/sites/*/services.local.yml
+
+# Vue local dependencies
+web/vue/node_modules/
+
+# Local environment overrides
+.env
+.env.local
+web/vue/.env.local

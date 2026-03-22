@@ -1,0 +1,29 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "icon": "facebook-benefit-icon-1.svg",
+      "title": "Tăng mạnh độ nhận diện thương hiệu",
+      "description": "Facebook Ads giúp doanh nghiệp xuất hiện thường xuyên trước mắt khách hàng tiềm năng, dù họ chưa từng biết đến thương hiệu của bạn."
+    },
+    {
+      "id": 2,
+      "icon": "facebook-benefit-icon-2.svg",
+      "title": "Tiếp cận đúng đối tượng khách hàng mục tiêu",
+      "description": "Facebook cho phép khoanh vùng khách hàng chính xác theo độ tuổi, giới tính, khu vực, sở thích, hành vi mua sắm... giúp tiết kiệm chi phí quảng cáo."
+    },
+    {
+      "id": 3,
+      "icon": "facebook-benefit-icon-3.svg",
+      "title": "Thúc đẩy doanh số bán hàng nhanh chóng",
+      "description": "Với khả năng hiển thị rộng và lan tỏa nhanh, Facebook Ads giúp tăng lượng truy cập website, inbox và đơn hàng chỉ trong thời gian ngắn."
+    },
+    {
+      "id": 4,
+      "icon": "facebook-benefit-icon-4.svg",
+      "title": "Cung cấp dữ liệu giúp tối ưu chiến lược marketing",
+      "description": "Facebook Ads không chỉ hiển thị quảng cáo mà còn cung cấp dữ liệu chi tiết: số người tiếp cận, lượt tương tác, tỷ lệ chuyển đổi, chi phí trên mỗi hành động."
+    }
+  ]
+}

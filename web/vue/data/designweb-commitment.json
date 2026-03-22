@@ -1,0 +1,29 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "icon": "like-shapes.svg",
+      "title": "Bàn giao",
+      "desc": "Bàn giao mã nguồn đầy đủ, hướng dẫn sử dụng chi tiết"
+    },
+    {
+      "id": 2,
+      "icon": "message-favorite.svg",
+      "title": "Bảo mật",
+      "desc": "Cam kết bảo mật thông tin khách hàng tuyệt đối"
+    },
+    {
+      "id": 3,
+      "icon": "24-support.svg",
+      "title": "Tiến độ",
+      "desc": "Đúng tiến độ đã cam kết, không phát sinh chi phí"
+    },
+    {
+      "id": 4,
+      "icon": "timer.svg",
+      "title": "Hỗ trợ",
+      "desc": "Hỗ trợ kỹ thuật 24/7, bảo hành trọn đời"
+    }
+  ]
+}

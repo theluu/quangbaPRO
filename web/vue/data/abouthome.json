@@ -1,0 +1,30 @@
+{
+  "message": "success!",
+  "data": 
+    {
+      "id": 1,
+      "src": "introduction.png",
+      "title": "Nâng tầm thương hiệu - Bứt phá doanh thu",
+      "text": "Thiết Kế Website Chuyên Nghiệp  Tăng độ nhận diện thương hiệu của bạn với website chuyên nghiệp, đẹp mắt và chuẩn SEO. Quangbapro cung cấp các dịch vụ trọn gói dành cho website của bạn...",
+      "srcLogo": "logo.svg",
+      "points": [
+        {
+          "iconClass": "ico-global",
+          "point": "Thiết kế web"
+        },
+        {
+          "iconClass": "ico-blogger",
+          "point": "Web Theme WP"
+        },
+        {
+          "iconClass": "ico-receipt-search",
+          "point": "Google ADS, Facebook ads"
+        },
+        {
+          "iconClass": "ico-global-search",
+          "point": "Dịch vụ Seo Web"
+        }
+      ]
+    }
+  
+}

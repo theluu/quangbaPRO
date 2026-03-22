@@ -1,0 +1,57 @@
+{
+    "message": "success!",
+    "data": [
+        {
+            "id": 1,
+            "title": "Thiết Kế Web",
+            "url": "/design-web",
+            "submenu": []
+        },
+        {
+            "id": 2,
+            "title": "Web Theme WP",
+            "url": "/theme-wp",
+            "submenu": []
+        },
+        {
+            "id": 3,
+            "title": "Marketing",
+            "url": "marketing",
+            "submenu": [
+                {
+                    "title": "Google Ads",
+                    "url": "/google-ads"
+                },
+                {
+                    "title": "Facebook Ads",
+                    "url": "/facebook-ads"
+                },
+                {
+                    "title": "Dịch vụ Seo",
+                    "url": "/service-seo"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Kiến Thức",
+            "url": "/knowledge",
+            "submenu": [
+                {
+                    "title": "Blog",
+                    "url": "/knowledge"
+                },
+                {
+                    "title": "Video",
+                    "url": "/video"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Giới Thiệu",
+            "url": "/about",
+            "submenu": []
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+services:
+  thietkeasea_vue_api.content_mapper:
+    class: Drupal\thietkeasea_vue_api\Service\ContentMapper
+    arguments:
+      - '@entity_type.manager'
+      - '@date.formatter'
+      - '@file_url_generator'
+      - '@path_alias.manager'

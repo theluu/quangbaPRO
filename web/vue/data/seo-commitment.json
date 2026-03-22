@@ -1,0 +1,24 @@
+{
+  "data": {
+    "commitments": [
+      {
+        "id": 1,
+        "icon": "seo-commitment-icon-1",
+        "title": "Tư vấn tận tâm",
+        "description": "Tư vấn SEO tận tâm giúp doanh nghiệp lựa chọn chiến lược phù hợp, tối ưu hiệu quả đầu tư và đạt thứ hạng cao bền vững trên Google. Đội ngũ chuyên gia SEO sẽ phân tích, đề xuất lộ trình phù hợp nhất với ngân sách và mục tiêu kinh doanh."
+      },
+      {
+        "id": 2,
+        "icon": "seo-commitment-icon-2",
+        "title": "Làm việc cật lực",
+        "description": "Làm việc cật lực trong SEO là yếu tố quyết định giúp doanh nghiệp đạt được thành công trên mọi trường trực tuyến. Mỗi chiến lược, mỗi từ khóa đều được nghiên cứu và triển khai kỹ lưỡng, với tinh thần trách nhiệm và sự nỗ lực không ngừng."
+      },
+      {
+        "id": 3,
+        "icon": "seo-commitment-icon-3",
+        "title": "Hỗ trợ trọn đời",
+        "description": "Hỗ trợ trọn đời trong dịch vụ SEO là cam kết đồng hành lâu dài cùng doanh nghiệp, không chỉ dừng lại khi dự án kết thúc. Đội ngũ chuyên gia luôn sẵn sàng tư vấn, theo dõi và tối ưu liên tục để website duy trì thứ hạng cao, tăng trưởng bền vững."
+      }
+    ]
+  }
+}

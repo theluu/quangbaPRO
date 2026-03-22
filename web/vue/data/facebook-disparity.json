@@ -1,0 +1,42 @@
+{
+  "data": {
+    "steps": [
+      {
+        "id": 1,
+        "icon": "facebook-disparity-icon-1.svg",
+        "title": "Chiến lược nhắm đúng khách hàng tiềm năng",
+        "description": "Sử dụng dữ liệu và AI để phân tích và nhắm chính xác mục tiêu dựa trên sở thích, hành vi, vị trí... từ đó tối ưu hóa quảng cáo."
+      },
+      {
+        "id": 2,
+        "icon": "facebook-disparity-icon-2.svg",
+        "title": "Chạy thử nghiệm A/B để tối ưu hiệu suất",
+        "description": "Quangbapro liên tục thử nghiệm các phiên bản quảng cáo khác nhau để chọn ra mẫu quảng cáo có hiệu quả tối ưu nhất."
+      },
+      {
+        "id": 3,
+        "icon": "facebook-disparity-icon-3.svg",
+        "title": "Quảng cáo sáng tạo & Nội dung thu hút",
+        "description": "Tạo ra những nội dung hấp dẫn, hình ảnh thu hút và video sinh động để gia tăng tỷ lệ tương tác và chuyển đổi mang lại hiệu quả cao nhất."
+      },
+      {
+        "id": 4,
+        "icon": "facebook-disparity-icon-4.svg",
+        "title": "Cam kết KPI rõ ràng",
+        "description": "Chúng tôi đảm bảo quảng cáo đặt đúng số lượt tiếp cận, tương tác, tin nhắn hoặc chuyển đổi đúng với cam kết ban đầu."
+      },
+      {
+        "id": 5,
+        "icon": "facebook-disparity-icon-5.svg",
+        "title": "Tối ưu ngân sách & Chi phí hợp lý",
+        "description": "Team Quangbapro cam kết tối ưu ngân sách chạy Ads, đảm bảo hiệu quả cao nhất, mang lại lợi nhuận từ chi phí quảng cáo."
+      },
+      {
+        "id": 6,
+        "icon": "facebook-disparity-icon-6.svg",
+        "title": "Báo cáo minh bạch, đo lường chi tiết",
+        "description": "Cung cấp báo cáo theo đúng với thời gian thực, giúp khách hàng theo dõi hiệu quả chiến dịch và thực hiện tối ưu hóa kịp thời."
+      }
+    ]
+  }
+}

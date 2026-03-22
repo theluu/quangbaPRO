@@ -1,0 +1,45 @@
+{
+    "message": "success!",
+    "data": {
+        "title": "QUY TRÌNH TRIỂN KHAI QUẢNG CÁO",
+        "subTitle": "Với 5 bước chỉ có tại <strong>Quangbapro</strong>",
+        "buttonText": "Đăng ký tư vấn",
+        "steps": [
+            {
+                "id": 1,
+                "step": "Bước 1",
+                "title": "Tiếp nhận thông tin",
+                "description": "Khách hàng và Quangbapro sẽ cùng trao đổi và tiếp nhận các thông tin cơ bản.",
+                "icon": "info-circle.png"
+            },
+            {
+                "id": 2,
+                "step": "Bước 2",
+                "title": "Đề xuất giải pháp",
+                "description": "Quangbapro đề xuất các giải pháp quảng cáo phù hợp ngân sách và quảng cáo của khách hàng.",
+                "icon": "microphone-2.png"
+            },
+            {
+                "id": 3,
+                "step": "Bước 3",
+                "title": "Lên kế hoạch cụ thể",
+                "description": "Sau khi xét duyệt, Quangbapro sẽ đưa ra chi tiết từng công việc với khách hàng.",
+                "icon": "presention-chart.png"
+            },
+            {
+                "id": 4,
+                "step": "Bước 4",
+                "title": "Triển khai quảng cáo",
+                "description": "Quangbapro tiến hành thực hiện kỹ thuật, tối ưu quảng cáo & cập nhật với khách hàng hằng ngày.",
+                "icon": "slider-horizontal.png"
+            },
+            {
+                "id": 5,
+                "step": "Bước 5",
+                "title": "Đo lường và tối ưu",
+                "description": "Đo lường hiệu quả quảng cáo của khách hàng và tối ưu chuyển đổi cao nhất.",
+                "icon": "radar-2.png"
+            }
+        ]
+    }
+}

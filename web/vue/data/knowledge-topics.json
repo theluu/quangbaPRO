@@ -1,0 +1,53 @@
+{
+    "message": "success",
+    "data": [
+        {
+            "id": 1,
+            "title": "SEO",
+            "icon": "topic-seo.png",
+            "items": [
+                "One page",
+                "Off page",
+                "Kế hoạch SEO",
+                "Công cụ SEO",
+                "Nghiên cứu từ khóa"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "CONTENT",
+            "icon": "topic-content.png",
+            "items": [
+                "Dàn ý bài viết",
+                "Search Intent",
+                "AIDA",
+                "Các loại concept",
+                "Tối ưu bài viết"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "GOOGLE AD",
+            "icon": "topic-google-ad.png",
+            "items": [
+                "Hình thức quảng cáo",
+                "Chính sách quảng cáo",
+                "Xây dựng Landingpage",
+                "Kế hoạch chạy quảng cáo",
+                "Tối ưu chuyển đổi"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "DIGITAL MARKETING",
+            "icon": "topic-digital-marketing.png",
+            "items": [
+                "Khóa học",
+                "Chứng chỉ",
+                "Thuật ngữ",
+                "Tiktok Ads",
+                "Marketing Plan"
+            ]
+        }
+    ]
+}

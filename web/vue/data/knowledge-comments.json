@@ -1,0 +1,38 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Nghĩa",
+            "date": "28/09/2025",
+            "content": "Lorem ipsum dolor sit amet consectetur. Sagittis amet habitant nec faucibus sed. Pellentesque elementum fringilla sollicitudin accumsan. Pharetra adipiscing diam ut egestas id sed. Neque a tortor sed dictum.",
+            "avatar": "avatar-tt-1.png",
+            "role": "user",
+            "replies": [
+                {
+                    "id": 2,
+                    "name": "Admin",
+                    "date": "28/09/2025",
+                    "content": "Sem aliquam donec scelerisque sed at. Eget ultricies nec lobortis ornare in. Turpis odio purus tempus convallis pellentesque. Felis non tortor phasellus ultricies. Diam euismod tempus id ultricies. Vitae consectetur fringilla in nec tempor feugiat. Lectus quam.",
+                    "avatar": "avatar-tt-2.png",
+                    "role": "admin"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Toàn",
+            "date": "30/09/2025",
+            "content": "Tempus id nisi varius tristique semper auctor cum mauris. Non turpis massa in facilisis purus integer massa lectus senectus. Vel elementum dictum convallis auctor enim adipiscing scelerisque libero viverra. Accumsan sed id in id tincidunt velit.",
+            "avatar": "avatar-tt-3.png",
+            "role": "user"
+        },
+        {
+            "id": 4,
+            "name": "Thảo",
+            "date": "30/09/2025",
+            "content": "Nunc id nulla eget imperdiet gravida sed dictum eu at. Aenean vel tempus amet aliquam. Feugiat quam quis congue scelerisque pretium lorem lobortis. Aliquet quam tempus mattis vulputate tempus facilisis eu accumsan fames.",
+            "avatar": "avatar-tt-4.png",
+            "role": "user"
+        }
+    ]
+}

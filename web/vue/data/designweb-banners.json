@@ -1,0 +1,29 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "imgSrcMb": "designweb-banner-1-mb.png",
+      "imgSrcPc": "designweb-banner-1-pc.png",
+      "title": "Thiết kế website theo yêu cầu",
+      "subTitle": "Giao diện độc quyền - Không trùng lặp",
+      "desc": "Thiết kế website theo yêu cầu riêng với giao diện độc đáo, phù hợp với thương hiệu và lĩnh vực kinh doanh của bạn."
+    },
+    {
+      "id": 2,
+      "imgSrcMb": "designweb-banner-2-mb.png",
+      "imgSrcPc": "designweb-banner-2-pc.png",
+      "title": "Website chuẩn SEO",
+      "subTitle": "Tối ưu tốc độ - Thân thiện công cụ tìm kiếm",
+      "desc": "Code được tối ưu hóa, giúp website tải nhanh và thân thiện với công cụ tìm kiếm, dễ dàng lên top Google."
+    },
+    {
+      "id": 3,
+      "imgSrcMb": "designweb-banner-3-mb.png",
+      "imgSrcPc": "designweb-banner-3-pc.png",
+      "title": "Hỗ trợ 24/7",
+      "subTitle": "Bảo hành trọn đời - Hỗ trợ tận tâm",
+      "desc": "Đội ngũ kỹ thuật luôn sẵn sàng hỗ trợ, sửa lỗi và cập nhật website của bạn mọi lúc, mọi nơi."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "icon": "global-edit.svg",
+      "title": "Giao diện độc quyền",
+      "desc": "Thiết kế giao diện độc quyền theo nhận diện thương hiệu"
+    },
+    {
+      "id": 2,
+      "icon": "monitor-mobbile.svg",
+      "title": "Giao diện độc quyền",
+      "desc": "Giải pháp tối ưu trải nghiệm người dùng (UX – UI)"
+    },
+    {
+      "id": 3,
+      "icon": "mobile-programming.svg",
+      "title": "Giao diện độc quyền",
+      "desc": "Tích hợp công nghệ & tính năng riêng biệt"
+    },
+    {
+      "id": 4,
+      "icon": "shield-security.svg",
+      "title": "Giao diện độc quyền",
+      "desc": "Gói bảo mật & hỗ trợ kỹ thuật chuyên sâu"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+name: Thietkeasea Vue API
+type: module
+description: Provides JSON endpoints for the Vue frontend.
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - node
+  - media
+  - taxonomy
+  - path_alias
+  - paragraphs

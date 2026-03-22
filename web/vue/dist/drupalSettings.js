@@ -1,0 +1,62 @@
+var drupalSettings = {
+  path: {
+    baseUrl: "/",
+    pathPrefix: "",
+    isFront: false,
+    currentLanguage: "en",
+  },
+  user: {
+    uid: "1589",
+    name: "testuser",
+    email: "testuser@gmail.com",
+    fullName: "Test User",
+    phone: "0912345678",
+    dialCode: "+84",
+    wallet: {
+      balance: 90,
+      currency: "USD",
+    },
+    roles: ["authenticated", "administrator"],
+    avatar: "/src/assets/images/avatars/avatar-student-1.jpg",
+    agent: "",
+    notifications: {
+      unread: 6,
+      total: 10,
+    },
+  },
+  languages: {
+    en: {
+      name: "English",
+      direction: "ltr",
+      langCode: "en",
+    },
+    "zh-hans": {
+      name: "Chinese, Simplified",
+      direction: "ltr",
+      langCode: "zh-hans",
+    },
+    vi: {
+      name: "Vietnamese",
+      direction: "ltr",
+      langCode: "vi",
+    },
+  },
+  endpoint: {
+    blockhome: "http://localhost:3000/mock-api/blockhome.json",
+    banners: "http://localhost:3000/mock-api/banners.json",
+    introductionHome: "http://localhost:3000/mock-api/abouthome.json",
+    packages: "http://localhost:3000/mock-api/packages.json",
+    services: "http://localhost:3000/mock-api/services.json",
+    featured: "http://localhost:3000/mock-api/featured.json",
+    partners: "http://localhost:3000/mock-api/partners.json",
+    newsHome: "http://localhost:3000/mock-api/news.json",
+    themes: "http://localhost:3000/mock-api/theme.json",
+    testimonials: "http://localhost:3000/mock-api/testimonials.json",
+    marketing: "http://localhost:3000/mock-api/marketing.json",
+    benefits: "http://localhost:3000/mock-api/designweb-benefits.json",
+    solutions: "http://localhost:3000/mock-api/designweb-solutions.json",
+    processes: "http://localhost:3000/mock-api/designweb-process.json",
+    commitments: "http://localhost:3000/mock-api/designweb-commitment.json",
+    reasonses: "http://localhost:3000/mock-api/designweb-reasons.json",
+  },
+};

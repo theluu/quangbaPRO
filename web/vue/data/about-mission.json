@@ -1,0 +1,53 @@
+{
+    "message": "success!",
+    "data": {
+        "title": {
+            "textPrimary": "",
+            "textDangler": "SỨ MỆNH GIÁ TRỊ CỐT LÕI"
+        },
+        "background": "bg-about-mission.png",
+        "items": [
+            {
+                "id": 1,
+                "number": "1",
+                "title": "NIỀM TIN",
+                "color": "#4285F4",
+                "content": [
+                    "Chúng tôi tin rằng sáng tạo là sức mạnh cốt lõi giúp thương hiệu khác biệt và bứt phá trên môi trường số. Mỗi website là một tác phẩm được tạo nên từ ý tưởng độc đáo và tư duy thẩm mỹ hiện đại.",
+                    "Chúng tôi tin rằng thành công của khách hàng chính là thành công của chúng tôi. Mỗi dự án là một hành trình đồng hành, lắng nghe và cùng nhau kiến tạo giá trị thật."
+                ]
+            },
+            {
+                "id": 2,
+                "number": "2",
+                "title": "SỨ MỆNH",
+                "color": "#FBBC05",
+                "content": [
+                    "Mang đến giải pháp thiết kế website chuyên nghiệp – sáng tạo – hiệu quả, giúp doanh nghiệp xây dựng thương hiệu trực tuyến vững mạnh và tăng trưởng bền vững trong kỷ nguyên số.",
+                    "Chúng tôi tồn tại để giúp doanh nghiệp thể hiện giá trị thương hiệu và tối ưu hiệu quả kinh doanh thông qua những website được thiết kế chuẩn UX/UI, tối ưu SEO và thân thiện với người dùng."
+                ]
+            },
+            {
+                "id": 3,
+                "number": "3",
+                "title": "TRIẾT LÝ KINH DOANH",
+                "color": "#FF4E42",
+                "content": [
+                    "Chúng tôi tin rằng mỗi website không chỉ là một sản phẩm công nghệ, mà là bộ mặt thương hiệu và công cụ kinh doanh hiệu quả của doanh nghiệp. Vì vậy, mỗi dự án đều được xây dựng bằng tư duy chiến lược, thiết kế sáng tạo và công nghệ bền vững.",
+                    "Phát triển bằng giá trị thật – chất lượng thật – con người thật. Không ngừng đổi mới sáng tạo, đầu tư vào năng lược đội ngũ và công nghệ để cùng khách hàng phát triển lâu dài."
+                ]
+            },
+            {
+                "id": 4,
+                "number": "4",
+                "title": "GIÁ TRỊ CỐT LÕI",
+                "color": "#25B37C",
+                "content": [
+                    "Luôn đổi mới trong ý tưởng, thiết kế và giải pháp — tạo nên những website độc đáo, khác biệt và mang dấu ấn riêng cho từng khách hàng.",
+                    "Tuân thủ quy trình làm việc rõ ràng, đúng tiến độ, tận tâm trong từng chi tiết để mang lại sản phẩm chất lượng cao và trải nghiệm tốt nhất.",
+                    "Lắng nghe, thấu hiểu và cùng khách hàng phát triển — không chỉ là đơn vị thiết kế, mà là đối tác công nghệ tin cậy."
+                ]
+            }
+        ]
+    }
+}

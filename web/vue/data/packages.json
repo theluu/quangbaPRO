@@ -1,0 +1,250 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "title": "Gói mua theme",
+      "price": "1.000.000",
+      "type": "base",
+      "lists": [
+        {
+          "text": "Theme",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Hướng Dẫn Sử Dụng",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Tặng Banner ",
+          "disabled": true,
+          "value": ""
+        },
+        {
+          "text": "Tặng Tên miền",
+          "disabled": true
+        },
+        {
+          "text": "Tặng Hosting",
+          "disabled": true,
+          "value": ""
+        },
+        {
+          "text": "Back Up",
+          "disabled": true,
+          "value": ""
+        },
+        {
+          "text": "Kiểm tra hoạt động của web",
+          "disabled": true,
+          "value": ""
+        },
+        {
+          "text": "Hỗ Trợ Đăng Bài",
+          "disabled": true,
+          "value": ""
+        },
+        {
+          "text": "Đăng sản phẩm",
+          "disabled": true,
+          "value": ""
+        },
+        {
+          "text": "Đăng Bài Tối Ưu Seo",
+          "disabled": true,
+          "value": ""
+        },
+        {
+          "text": "Thời Gian Hoàn Thành",
+          "disabled": false,
+          "value": "3’"
+        }
+      ],
+      "isShowIcon": true,
+      "classButton": "btn-primary",
+      "link": "#"
+    },
+    {
+      "id": 2,
+      "title": "Gói chuyên nghiệp",
+      "price": "2.950.000",
+      "type": "professional",
+      "lists": [
+        {
+          "text": "Theme",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Hướng Dẫn Sử Dụng",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Tặng Banner ",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Tặng Tên miền",
+          "disabled": false
+        },
+        {
+          "text": "Tặng Hosting",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Back Up",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Kiểm tra hoạt động của web",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Hỗ Trợ Đăng Bài",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Đăng sản phẩm",
+          "disabled": false,
+          "value": "10 bài"
+        },
+        {
+          "text": "Đăng Bài Tối Ưu Seo",
+          "disabled": false,
+          "value": "1 bài/tháng"
+        },
+        {
+          "text": "Thời Gian Hoàn Thành",
+          "disabled": false,
+          "value": "2-3 ngày"
+        }
+      ],
+      "isShowIcon": true,
+      "classButton": "btn-warning",
+      "link": "#"
+    },
+    {
+      "id": 3,
+      "title": "Gói vip",
+      "price": "5.950.000",
+      "type": "vip",
+      "lists": [
+        {
+          "text": "Theme",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Hướng Dẫn Sử Dụng",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Tặng Banner ",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Tặng Tên miền",
+          "disabled": false
+        },
+        {
+          "text": "Tặng Hosting",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Back Up",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Kiểm tra hoạt động của web",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Hỗ Trợ Đăng Bài",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Đăng sản phẩm",
+          "disabled": false,
+          "value": "10 bài"
+        },
+        {
+          "text": "Đăng Bài Tối Ưu Seo",
+          "disabled": false,
+          "value": "1 bài/tháng"
+        },
+        {
+          "text": "Thời Gian Hoàn Thành",
+          "disabled": false,
+          "value": "2-3 ngày"
+        }
+      ],
+      "isShowIcon": true,
+      "classButton": "btn-success",
+      "link": "#"
+    },
+    {
+      "id": 4,
+      "title": "Gói Theo yêu cầu",
+      "price": "Liên hệ",
+      "type": "on-demand",
+      "lists": [
+        {
+          "text": "Code Tay",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Code Tool",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Web Game",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Web chuyên ngành",
+          "disabled": false
+        },
+        {
+          "text": "Web Chức năng",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Web Độc quyền",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Phân quyền người dùng",
+          "disabled": false,
+          "value": ""
+        },
+        {
+          "text": "Tùy chỉnh theo yêu cầu",
+          "disabled": false,
+          "value": ""
+        }
+      ],
+      "isShowIcon": true,
+      "classButton": "btn-success",
+      "link": "#"
+    }
+  ]
+}

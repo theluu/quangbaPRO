@@ -1,0 +1,34 @@
+{
+  "data": {
+    "src": "seo-definition.png",
+    "title": "Dịch vụ SEO là gì",
+    "description": "Dịch vụ SEO (viết tắt của Search Engine Optimization – tối ưu hóa công cụ tìm kiếm) là giải pháp giúp website của bạn đạt thứ hạng cao hơn trên Google (và các công cụ tìm kiếm khác) một cách tự nhiên, không tốn phí quảng cáo cho mỗi lượt nhấp.",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Phân tích từ khóa:",
+        "description": "Tìm các từ khóa khách hàng hay tìm kiếm nhất."
+      },
+      {
+        "number": 2,
+        "title": "Tối ưu website (SEO Onpage):",
+        "description": "Chỉnh sửa cấu trúc, tốc độ, nội dung, hình ảnh để thân thiện với Google."
+      },
+      {
+        "number": 3,
+        "title": "Xây dựng nội dung chuẩn SEO:",
+        "description": "Viết bài blog, landing page chất lượng."
+      },
+      {
+        "number": 4,
+        "title": "Xây dựng liên kết (SEO Offpage):",
+        "description": "Tạo liên kết uy tín từ các website khác về trang của bạn."
+      },
+      {
+        "number": 5,
+        "title": "Theo dõi – đo lường – báo cáo:",
+        "description": "Thường xuyên cập nhật thứ hạng từ khóa và lượng truy cập."
+      }
+    ]
+  }
+}

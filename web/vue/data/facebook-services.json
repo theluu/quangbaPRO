@@ -1,0 +1,38 @@
+{
+  "data": {
+    "services": [
+      {
+        "icon": "facebook-service-icon-1",
+        "title": "Quảng cáo chuyển đổi facebook",
+        "description": "Phù hợp với những doanh nghiệp có mục tiêu chính là doanh số hoặc chuyển đổi khách hàng trực tiếp từ quảng cáo Facebook. Quảng cáo chuyển đổi Facebook nhằm thúc đẩy hành động cụ thể của khách hàng.",
+        "features": [
+          {
+            "text": "<strong>Tăng tỷ lệ đơn hàng online</strong> trên website hoặc landing page"
+          },
+          {
+            "text": "<strong>Tối ưu chi phí quảng cáo (CPA)</strong> – chỉ trả tiền khi khách hàng thực sự hành động."
+          },
+          {
+            "text": "<strong>Đo lường chính xác hiệu quả bán hàng</strong> thông qua Facebook Pixel hoặc API."
+          }
+        ]
+      },
+      {
+        "icon": "facebook-service-icon-2",
+        "title": "Thuê tài khoản invoice facebook",
+        "description": "Phù hợp với những doanh nghiệp có ngân sách trên 100 triệu/tháng, tự chạy quảng cáo Facebook được nhưng gặp vấn đề tài khoản (hạn chế, vô hiệu hóa, chi tiêu kém) mong muốn có tài khoản ổn định để duy trì quảng cáo.",
+        "features": [
+          {
+            "text": "<strong>Không cần nạp tiền thủ công,</strong> giúp chiến dịch chạy liên tục"
+          },
+          {
+            "text": "<strong>Nhận hóa đơn hợp lệ</strong> (phù hợp cho kế toán, xuất VAT doanh nghiệp)."
+          },
+          {
+            "text": "<strong>Dễ quản lý ngân sách</strong> và báo cáo chi tiêu quảng cáo. Ưu tiên độ ổn định cao, hạn chế khóa tài khoản hoặc dừng đột ngột."
+          }
+        ]
+      }
+    ]
+  }
+}

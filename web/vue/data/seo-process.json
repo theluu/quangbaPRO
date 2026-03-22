@@ -1,0 +1,42 @@
+{
+  "data": {
+    "steps": [
+      {
+        "id": 1,
+        "icon": "seo-process-icon-1.svg",
+        "title": "Phân tích nhu cầu và mục tiêu",
+        "description": "Quy trình bắt đầu bằng việc phân tích nhu cầu của khách hàng. Đội ngũ chuyên gia SEO của Công Ty sẽ nghiên cứu tính hoạt động, thị trường, đối thủ cạnh tranh và mục tiêu kinh doanh của khách hàng để đề xuất đưa ra các mục tiêu cụ thể và đo lường được."
+      },
+      {
+        "id": 2,
+        "icon": "seo-process-icon-2.svg",
+        "title": "Lập kế hoạch và chiến lược SEO",
+        "description": "Dựa vào thông tin thu thập được, đội ngũ chuyên gia SEO sẽ xây dựng một kế hoạch chiến lược tùy chỉnh cho từng khách hàng. Kế hoạch này bao gồm các biện pháp tối ưu hóa nội dung, từ khóa, công cụ SEO, tối ưu trang web và phân tích thị trường."
+      },
+      {
+        "id": 3,
+        "icon": "seo-process-icon-3.svg",
+        "title": "Tối ưu hóa nội dung",
+        "description": "Tối ưu hóa SEO là quá trình cải thiện toàn diện website nhằm giúp nội dung thân thiện hơn với công cụ tìm kiếm và người dùng. Việc tối ưu SEO đúng cách giúp website tăng thứ hạng trên Google, thu hút nhiều khách hàng tiềm năng, nâng cao uy tín thương hiệu."
+      },
+      {
+        "id": 4,
+        "icon": "seo-process-icon-4.svg",
+        "title": "Xây dựng liên kết",
+        "description": "Xây dựng liên kết (Link Building) là một phần quan trọng trong chiến lược SEO tổng thể, giúp tăng độ tin cậy và sức mạnh cho website. Thông qua việc tạo ra các liên kết chất lượng từ những trang uy tín, doanh nghiệp có thể cải thiện thứ hạng từ khóa."
+      },
+      {
+        "id": 5,
+        "icon": "seo-process-icon-5.svg",
+        "title": "Đo lường và theo dõi",
+        "description": "Quy trình triển khai không chỉ dừng lại ở việc triển khai mà còn theo dõi và đo lường hiệu quả của chiến dịch SEO và sẽ báo cáo định kỳ về tăng trường từ khóa, traffic user vào website để khách hàng nắm chỉ tiết hiệu quả thực hiện."
+      },
+      {
+        "id": 6,
+        "icon": "seo-process-icon-6.svg",
+        "title": "Tối ưu hóa liên tục",
+        "description": "Dựa vào các báo cáo và số liệu cụ thể, sẽ điều chỉnh chiến lược SEO liên tục để đảm bảo tối ưu website, giúp từ khóa website đạt được thứ hạng cao trên công cụ tìm kiếm google một cách nhanh chóng, bền vững và an toàn nhất cho doanh nghiệp."
+      }
+    ]
+  }
+}

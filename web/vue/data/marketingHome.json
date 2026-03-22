@@ -1,0 +1,53 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "src": "marketing-1.png",
+      "title": "Thiết kế web",
+      "desc": "Giao diện đẹp, tối ưu trải nghiệm người dùng, phù hợp với lĩnh vực kinh doanh và cá tính thương hiệu."
+    },
+    {
+      "id": 2,
+      "src": "marketing-2.png",
+      "title": "Theme WP",
+      "desc": "Theme được tối ưu hóa chuẩn SEO, code sạch, tốc độ tải nhanh, thân thiện với công cụ tìm kiếm."
+    },
+    {
+      "id": 3,
+      "src": "marketing-3.png",
+      "title": "Google ads",
+      "desc": "Google Ads là công cụ quảng cáo hiệu quả, nhanh chóng và đo lường chính xác, phù hợp với mọi quy mô doanh nghiệp muốn tiếp cận khách hàng trên môi trường số."
+    },
+    {
+      "id": 4,
+      "src": "marketing-4.png",
+      "title": "Facebook Ads",
+      "desc": "Giao diện đẹp, tối ưu trải nghiệm người dùng, phù hợp với lĩnh vực kinh doanh và cá tính thương hiệu."
+    },
+    {
+      "id": 5,
+      "src": "marketing-5.png",
+      "title": "Dịch Vụ Seo",
+      "desc": "Giao diện đẹp, tối ưu trải nghiệm người dùng, phù hợp với lĩnh vực kinh doanh và cá tính thương hiệu."
+    },
+    {
+      "id": 6,
+      "src": "marketing-6.png",
+      "title": "Seo tổng thể",
+      "desc": "Theme được tối ưu hóa chuẩn SEO, code sạch, tốc độ tải nhanh, thân thiện với công cụ tìm kiếm."
+    },
+    {
+      "id": 7,
+      "src": "marketing-7.png",
+      "title": "Social",
+      "desc": "Google Ads là công cụ quảng cáo hiệu quả, nhanh chóng và đo lường chính xác, phù hợp với mọi quy mô doanh nghiệp muốn tiếp cận khách hàng trên môi trường số."
+    },
+    {
+      "id": 8,
+      "src": "marketing-8.png",
+      "title": "Tổ Chức Sự Kiện",
+      "desc": "Giao diện đẹp, tối ưu trải nghiệm người dùng, phù hợp với lĩnh vực kinh doanh và cá tính thương hiệu."
+    }
+  ]
+}

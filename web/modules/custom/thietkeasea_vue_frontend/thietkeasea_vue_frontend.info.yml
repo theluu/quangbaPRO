@@ -1,0 +1,7 @@
+name: Thietkeasea Vue Frontend
+type: module
+description: Mounts the Vue application inside Drupal and injects runtime settings.
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - thietkeasea_vue_api

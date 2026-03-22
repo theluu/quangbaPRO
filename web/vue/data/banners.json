@@ -1,0 +1,29 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "imgSrcMb": "hero-banner-img1-mb.png",
+      "imgSrcPc": "hero-banner-img1-pc.png",
+      "title": "Thiết kế website",
+      "subTitle": "Chuyên nghiệp - chuẩn SEO",
+      "desc": "Công ty thiết kế website chuyên nghiệp chuẩn SEO trọn gói giúp bạn quảng bá thương hiệu, cải thiện hệ thống bán hàng và tăng nhận diện cho thương hiệu."
+    },
+    {
+      "id": 1,
+      "imgSrcMb": "hero-banner-img1-mb.png",
+      "imgSrcPc": "hero-banner-img1-pc.png",
+      "title": "Giải pháp Marketing",
+      "subTitle": "Hiệu quả - Tối ưu chi phí",
+      "desc": "Cung cấp các giải pháp marketing online tổng thể, giúp doanh nghiệp tiếp cận khách hàng tiềm năng một cách hiệu quả nhất."
+    },
+    {
+      "id": 1,
+      "imgSrcMb": "hero-banner-img1-mb.png",
+      "imgSrcPc": "hero-banner-img1-pc.png",
+      "title": "Quản trị nội dung",
+      "subTitle": "Sáng tạo - Chất lượng",
+      "desc": "Dịch vụ quản trị và sáng tạo nội dung website, fanpage giúp thu hút và giữ chân khách hàng, nâng cao uy tín thương hiệu."
+    }
+  ]
+}

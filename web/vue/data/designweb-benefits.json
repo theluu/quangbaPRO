@@ -1,0 +1,67 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "title": "Mở Cửa Hàng Online Ấn Tượng, Thu Hút",
+      "image": "benefit-1.png",
+      "items": [
+        {
+          "icon": "shop.png",
+          "title": "Giao diện chuẩn thương mại điện tử"
+        },
+        {
+          "icon": "monitor-mobbile.png",
+          "title": "Đáp ứng đa nền tảng (Responsive)"
+        },
+        {
+          "icon": "search-status.png",
+          "title": "Tối ưu tốc độ & SEO"
+        },
+        {
+          "icon": "setting-2.png",
+          "title": "Quản trị đơn giản"
+        },
+        {
+          "icon": "shield-tick.png",
+          "title": "Bảo mật cao & tích hợp thanh toán đa dạng"
+        },
+        {
+          "icon": "additem.png",
+          "title": "Tùy biến & mở rộng linh hoạt"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Tích Hợp Trọn Bộ Tính Năng Hỗ Trợ Hoạt Động Bán Hàng",
+      "image": "benefit-2.png",
+      "items": [
+        {
+          "icon": "card-pos.png",
+          "title": "Thanh toán online hình thức đa dạng"
+        },
+        {
+          "icon": "messages.png",
+          "title": "Chatbot tư vấn, chatbot AI hỗ trợ"
+        },
+        {
+          "icon": "sms-tracking.png",
+          "title": "Email marketing Automation tích hợp"
+        },
+        {
+          "icon": "data-2.png",
+          "title": "CRM thu data, phân loại và sàng lọc data."
+        },
+        {
+          "icon": "shield-tick.png",
+          "title": "Loyalty tích điểm, phân hạng và giữ chân khách hàng"
+        },
+        {
+          "icon": "forward-item.png",
+          "title": "Mở rộng khu vực Banner, Popup phục vụ MKT trên website"
+        }
+      ]
+    }
+  ]
+}

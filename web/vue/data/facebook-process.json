@@ -1,0 +1,29 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "icon": "facebook-process-icon-1.svg",
+      "title": "Tiếp nhận - tư vấn từ chuyên viên",
+      "description": "Ngay khi tiếp nhận yêu cầu, đội ngũ của chúng tôi sẽ liên hệ tìm hiểu mục tiêu kinh doanh và đề xuất giải pháp phù hợp nhất"
+    },
+    {
+      "id": 2,
+      "icon": "facebook-process-icon-2.svg",
+      "title": "Kiểm tra tổng thể fanpage & Website (nếu có)",
+      "description": "Chúng tôi sẽ đánh giá tổng thể nội dung Fanpage, khả năng tối ưu trang đích để nắm bắt điểm mạnh - điểm cần phải cải thiện."
+    },
+    {
+      "id": 3,
+      "icon": "facebook-process-icon-3.svg",
+      "title": "Phân tích chiến lược từ đối thủ",
+      "description": "Nghiên cứu 10 đối thủ đang hoạt động tốt trong cùng ngành, phân tích nội dung, mức chi tiêu để đưa ra chiến lược cạnh tranh."
+    },
+    {
+      "id": 4,
+      "icon": "facebook-process-icon-4.svg",
+      "title": "Lên kế hoạch xây dựng và phát triển (1-3 ngày)",
+      "description": "Bao gồm nội dung,chọn nhóm đối tượng mục tiêu, kế hoạch chi tiêu và dự đoán hiệu quả chiến dịch dựa trên dữ liệu trước đó."
+    }
+  ]
+}

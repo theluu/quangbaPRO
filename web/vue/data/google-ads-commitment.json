@@ -1,0 +1,42 @@
+{
+    "message": "success!",
+    "data": {
+        "title": "CAM KẾT",
+        "subTitle": "Cam kết của <strong>Quangbapro</strong> về dịch vụ quảng cáo GoogleAd",
+        "image": "google-ads-commitment-illustration.png",
+        "commitmentList": [
+            {
+                "id": 1,
+                "text": "Tối ưu chi phí – Hiệu quả tối đa"
+            },
+            {
+                "id": 2,
+                "text": "Báo cáo minh bạch – Rõ ràng từng đồng chi tiêu"
+            },
+            {
+                "id": 3,
+                "text": "Tư vấn chiến lược đúng mục tiêu kinh doanh"
+            },
+            {
+                "id": 4,
+                "text": "Không phát sinh chi phí ẩn"
+            },
+            {
+                "id": 5,
+                "text": "Đội ngũ chuyên gia Google Ads nhiều kinh nghiệm"
+            },
+            {
+                "id": 6,
+                "text": "Tối ưu điểm chất lượng – Giảm giá thầu"
+            },
+            {
+                "id": 7,
+                "text": "Duy trì quảng cáo ổn định 24/7"
+            },
+            {
+                "id": 8,
+                "text": "Hoàn tiền nếu không đảm bảo những điều kiện và cam kết."
+            }
+        ]
+    }
+}

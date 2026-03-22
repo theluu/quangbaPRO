@@ -1,0 +1,151 @@
+thietkeasea_vue_api.banners:
+  path: '/api/v1/banners'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::banners'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.services:
+  path: '/api/v1/services'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::services'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.marketing:
+  path: '/api/v1/marketing'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::marketing'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.packages:
+  path: '/api/v1/packages'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::packages'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.wppackages:
+  path: '/api/v1/wppackages'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::wpPackages'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.themes:
+  path: '/api/v1/themes'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::themes'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.wpfeatured:
+  path: '/api/v1/wp-featured'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::wpFeatured'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.wpwhy:
+  path: '/api/v1/wp-why'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::wpWhy'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.partners:
+  path: '/api/v1/partners'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::partners'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.testimonials:
+  path: '/api/v1/testimonials'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::testimonials'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.faqs:
+  path: '/api/v1/faqs'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::faqs'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.wpfaq:
+  path: '/api/v1/wp-faq'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::wpFaq'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.knowledge_list:
+  path: '/api/v1/knowledge-list'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::knowledgeList'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.knowledge_detail:
+  path: '/api/v1/knowledge-detail'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::knowledgeDetail'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.knowledge_categories:
+  path: '/api/v1/knowledge-categories'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::knowledgeCategories'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.knowledge_topics:
+  path: '/api/v1/knowledge-topics'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::knowledgeTopics'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.knowledge_related_news:
+  path: '/api/v1/knowledge-related-news'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::knowledgeRelatedNews'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.placeholder_list:
+  path: '/api/v1/placeholder/list/{key}'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::placeholderList'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.placeholder_object:
+  path: '/api/v1/placeholder/object/{key}'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::placeholderObject'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,53 @@
+{
+    "message": "success",
+    "data": [
+        {
+            "id": 1,
+            "title": "SEO",
+            "count": "30 bài viết",
+            "icon": "search-status.png"
+        },
+        {
+            "id": 2,
+            "title": "SEO AI",
+            "count": "30 bài viết",
+            "icon": "airdrop.png"
+        },
+        {
+            "id": 3,
+            "title": "GOOGLE AD",
+            "count": "120+ bài viết",
+            "icon": "google.png"
+        },
+        {
+            "id": 4,
+            "title": "MARKETING ONLINE",
+            "count": "80+ bài viết",
+            "icon": "sms-tracking.png"
+        },
+        {
+            "id": 5,
+            "title": "DIGITAL MARKETING",
+            "count": "30 bài viết",
+            "icon": "chart-2.png"
+        },
+        {
+            "id": 6,
+            "title": "FACEBOOK AD",
+            "count": "30 bài viết",
+            "icon": "facebook.png"
+        },
+        {
+            "id": 7,
+            "title": "CONTENT MARKETING",
+            "count": "30 bài viết",
+            "icon": "document-text.png"
+        },
+        {
+            "id": 8,
+            "title": "TỔ CHỨC SỰ KIỆN",
+            "count": "30 bài viết",
+            "icon": "presention-chart.png"
+        }
+    ]
+}

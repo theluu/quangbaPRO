@@ -1,0 +1,41 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "src": "reason-1.png",
+      "title": "năng lực quản trị",
+      "desc": "Trên 10 năm kinh nghiệm quản trị, vận hành cho các nền tảng trực tuyến, SEO website, quảng cáo Facebook, Google."
+    },
+    {
+      "id": 2,
+      "src": "reason-2.png",
+      "title": "Công nghệ thiết kế cao cấp",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Est nibh lacus ullamcorper lectus cras nisi senectus quam non. "
+    },
+    {
+      "id": 3,
+      "src": "reason-3.png",
+      "title": "Dịch vụ chuyên nghiệp",
+      "desc": "Sit posuere nunc lorem congue at in massa vulputate. Pellentesque at tempus hendrerit nec in ut in orci. "
+    },
+    {
+      "id": 3,
+      "src": "reason-4.png",
+      "title": "nền tảng mở sẵn sàng kết nối",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Ornare est pretium cras rhoncus. Tempor dolor laoreet sollicitudin facilisi interdum quis."
+    },
+    {
+      "id": 3,
+      "src": "reason-5.png",
+      "title": "Công nghệ hạ tầng bảo mật cao",
+      "desc": " Eget feugiat quis integer nullam phasellus in sapien enim eget. Eget facilisis sem massa ante proin facilisi aliquet orci."
+    },
+    {
+      "id": 6,
+      "src": "reason-6.png",
+      "title": "Chính sách bảo hành hấp dẫn",
+      "desc": "Dolor sit amet consectetur. Cursus sit neque mattis quis. Sem etiam at neque sed condimentum. Ut vulputate tellus nunc tellus in."
+    }
+  ]
+}

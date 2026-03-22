@@ -1,0 +1,47 @@
+{
+  "data": {
+    "packages": [
+      {
+        "id": 1,
+        "name": "Gói SEO Basic",
+        "price": "150-250 tr",
+        "color": "blue",
+        "features": [
+          "Hợp đồng 6 - 12 tháng",
+          "Cam kết từ khóa đạt 80% TOP 10",
+          "x2 - x5 Organic Traffic tổng thể",
+          "Mức độ cạnh tranh từ khóa: dễ"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Gói SEO Premium",
+        "price": "250 - 450 Tr",
+        "color": "orange",
+        "featured": true,
+        "features": [
+          "Hợp đồng 8 - 12 tháng",
+          "Cam kết từ khóa đạt 70% Top 5",
+          "Organic Traffic TOP 5 - 10 thị trường",
+          "Mức độ cạnh tranh từ khóa: trung bình",
+          "Mức độ lên TOP toàn ngành: trung bình",
+          "Bảo hành 1 tháng"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "GÓI VIP",
+        "price": ">500 Tr",
+        "color": "red",
+        "features": [
+          "Hợp đồng 12 tháng",
+          "Cam kết từ khóa TOP 3, TOP 5",
+          "Cam kết 20 - 50% top 1-3, 70% top 1-5",
+          "Mức độ cạnh tranh từ khóa: cao",
+          "Mức độ lên TOP toàn ngành: cao",
+          "Bảo hành 1 tháng"
+        ]
+      }
+    ]
+  }
+}

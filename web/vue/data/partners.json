@@ -1,0 +1,35 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "src": "partner-1.png",
+      "alt": "img"
+    },
+    {
+      "id": 2,
+      "src": "partner-2.png",
+      "alt": "img"
+    },
+    {
+      "id": 3,
+      "src": "partner-3.png",
+      "alt": "img"
+    },
+    {
+      "id": 4,
+      "src": "partner-4.png",
+      "alt": "img"
+    },
+    {
+      "id": 5,
+      "src": "partner-5.png",
+      "alt": "img"
+    },
+    {
+      "id": 6,
+      "src": "partner-6.png",
+      "alt": "img"
+    }
+  ]
+}

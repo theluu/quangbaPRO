@@ -1,0 +1,45 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "icon": "wp-icon-card-pos.png",
+      "title": "Giao diện thiết kế đẹp, sáng tạo"
+    },
+    {
+      "id": 2,
+      "icon": "wp-icon-messages.png",
+      "title": "Tùy biến linh hoạt"
+    },
+    {
+      "id": 3,
+      "icon": "wp-icon-sms-tracking.png",
+      "title": "Tương thích với mọi thiết bị"
+    },
+    {
+      "id": 4,
+      "icon": "wp-icon-data-2.png",
+      "title": "Tối ưu chuẩn SEO"
+    },
+    {
+      "id": 5,
+      "icon": "wp-icon-rocket.png",
+      "title": "Hosting tốc độ cao"
+    },
+    {
+      "id": 6,
+      "icon": "wp-icon-setting-2.png",
+      "title": "Quản trị dễ dàng"
+    },
+    {
+      "id": 7,
+      "icon": "wp-icon-wechat.png",
+      "title": "Tư vấn Marketing miễn phí"
+    },
+    {
+      "id": 8,
+      "icon": "wp-icon-box-time.png",
+      "title": "Đúng tiến độ"
+    }
+  ]
+}

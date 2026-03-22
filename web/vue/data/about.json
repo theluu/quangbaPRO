@@ -1,0 +1,127 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "type": "general",
+      "demo": true,
+      "status": "demo",
+      "title": "TEST DEMO",
+      "buttonText": "TAKE TEST"
+    },
+    {
+      "id": 2,
+      "type": "general",
+      "status": "available",
+      "title": "IELTS Practice",
+      "caption": "Test 1",
+      "buttonText": "BUY NOW"
+    },
+    {
+      "id": 3,
+      "type": "general",
+      "status": "available",
+      "title": "IELTS Practice",
+      "caption": "Test 3",
+      "buttonText": "BUY NOW"
+    },
+    {
+      "id": 4,
+      "type": "general",
+      "status": "available",
+      "title": "IELTS Practice",
+      "caption": "Practice Test 5",
+      "scoreValue": "6.5",
+      "buttonText": "BUY NOW"
+    },
+    {
+      "id": 5,
+      "type": "general",
+      "status": "available",
+      "title": "IELTS 4 Skill",
+      "caption": "Practice Test 5",
+      "buttonText": "BUY NOW"
+    },
+    {
+      "id": 6,
+      "type": "general",
+      "status": "available",
+      "title": "IELTS Practice",
+      "caption": "Test 3",
+      "buttonText": "BUY NOW"
+    },
+    {
+      "id": 7,
+      "type": "general",
+      "status": "available",
+      "title": "IELTS Practice",
+      "caption": "Test 3",
+      "buttonText": "BUY NOW"
+    },
+    {
+      "id": 8,
+      "type": "general",
+      "status": "available",
+      "title": "IELTS Practice",
+      "caption": "Practice Test 5",
+      "scoreValue": "8.5",
+      "buttonText": "BUY NOW"
+    },
+    {
+      "id": 9,
+      "type": "academic",
+      "status": "available",
+      "title": "IELTS 4 Skill",
+      "caption": "Practice Test 5",
+      "buttonText": "BUY NOW"
+    },
+    {
+      "id": 10,
+      "type": "academic",
+      "status": "available",
+      "title": "IELTS Practice",
+      "caption": "Test 2",
+      "buttonText": "BUY NOW"
+    },
+    {
+      "id": 11,
+      "type": "academic",
+      "status": "available",
+      "title": "IELTS Practice",
+      "caption": "Test 1",
+      "buttonText": "BUY NOW"
+    },
+    {
+      "id": 12,
+      "type": "academic",
+      "status": "available",
+      "title": "IELTS Practice",
+      "caption": "Test 2",
+      "buttonText": "BUY NOW"
+    },
+    {
+      "id": 13,
+      "type": "academic",
+      "status": "available",
+      "title": "IELTS Practice",
+      "caption": "Test 3",
+      "buttonText": "BUY NOW"
+    },
+    {
+      "id": 14,
+      "type": "academic",
+      "status": "available",
+      "title": "IELTS Practice",
+      "caption": "Test 4",
+      "buttonText": "BUY NOW"
+    },
+    {
+      "id": 15,
+      "type": "academic",
+      "status": "available",
+      "title": "IELTS Practice",
+      "caption": "Test 5",
+      "buttonText": "BUY NOW"
+    }
+  ]
+}

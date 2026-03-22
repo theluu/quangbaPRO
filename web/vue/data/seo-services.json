@@ -1,0 +1,70 @@
+{
+  "data": {
+    "services": [
+      {
+        "icon": "service-icon-1",
+        "title": "DỊCH VỤ SEO TỔNG THỂ",
+        "description": "SEO tổng thể là chiến lược tối ưu toàn bộ website — từ kỹ thuật, nội dung đến trải nghiệm người dùng — nhằm giúp bạn kiến tới khóa liên quan đến sản phẩm/dịch vụ của bạn xuất hiện trên trang đầu Google.",
+        "features": [
+          {
+            "text": "Đưa website lên TOP hàng nghìn từ khóa: Mở rộng khả năng hiển thị, thu hút đông khách hàng tiềm năng."
+          },
+          {
+            "text": "Tăng traffic & chuyển đổi bền vững: Biến lượt truy cập thành khách hàng thực sự, nâng cao uy tín và thế doanh nghiệp."
+          },
+          {
+            "text": "Liên tục tối ưu trải nghiệm người dùng: Giữ chân khách hàng, thúc đẩy sự quay lại và tăng giá trị thương hiệu."
+          }
+        ]
+      },
+      {
+        "icon": "service-icon-2",
+        "title": "DỊCH VỤ SEO TỪ KHÓA",
+        "description": "SEO từ khóa là giải pháp giúp đưa các từ khóa quan trọng liên quan đến sản phẩm, dịch vụ hoặc thương hiệu của bạn lên vị trí TOP của Google, từ đó tăng lượng truy cập và doanh số bán hàng mỗi cách tự nhiên, bền vững.",
+        "features": [
+          {
+            "text": "Lên TOP từ khóa cạnh tranh cao: Mở rộng tập khách hàng, tăng cơ hội bán hàng và tối ưu doanh thu."
+          },
+          {
+            "text": "Giảm chi phí quảng cáo: Website xếp hạng cao giúp bạn chỉ gửi trước các tác quảng cáo trả phí, tiết kiệm ngân sách dẳng kể."
+          },
+          {
+            "text": "Gia tăng traffic chất lượng: Cạp từ khóa giúp website thu hút đông khách hàng tiềm năng, nâng cao hiệu quả kinh doanh."
+          }
+        ]
+      },
+      {
+        "icon": "service-icon-3",
+        "title": "DỊCH VỤ SEO TRAFFIC",
+        "description": "SEO Traffic là giải pháp giúp tăng lượng truy cập (traffic) cho website một cách tự nhiên, bền vững và ăn toàn thông qua việc tối ưu nội dung, từ khóa và trải nghiệm người dùng.",
+        "features": [
+          {
+            "text": "Tăng lượng truy cập tự nhiên (Organic Traffic): Mở rộng khả năng hiển thị, thu hút đông khách hàng tiềm năng."
+          },
+          {
+            "text": "Thu hút đúng tệp khách hàng tiềm năng: Biến lượt truy cập thành khách hàng thực sự, nâng cao uy tín và thế doanh nghiệp."
+          },
+          {
+            "text": "Gia tăng thứ hạng từ khóa: Giữ chân khách hàng, thúc đẩy sự quay lại và gia tăng giá trị thương hiệu."
+          }
+        ]
+      },
+      {
+        "icon": "service-icon-4",
+        "title": "DỊCH VỤ VIẾT CONTENT SEO",
+        "description": "Dịch vụ viết Content SEO là giải pháp giúp doanh nghiệp xây dựng nội dung chuẩn SEO, thu hút người đọc, đồng thời tăng thứ hạng từ khóa và đưa website lên TOP Google một cách tự nhiên, bền vững.",
+        "features": [
+          {
+            "text": "Tối ưu nội dung theo chuẩn SEO Google: Mở rộng khả năng hiển thị, thu hút đông khách hàng tiềm năng."
+          },
+          {
+            "text": "Đưa từ khóa lên top nhanh, ấn định và bền vững: Biến lượt truy cập thành khách hàng thực sự, nâng cao uy tín và thế doanh nghiệp."
+          },
+          {
+            "text": "Gia tăng lượng truy cập tự nhiên: Giữ chân khách hàng, thúc đẩy sự quay lại và gia tăng giá trị thương hiệu."
+          }
+        ]
+      }
+    ]
+  }
+}

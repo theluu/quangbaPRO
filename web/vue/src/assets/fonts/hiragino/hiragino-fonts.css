@@ -1,0 +1,8 @@
+@font-face{
+    font-family: "Hiragino";
+    src: url("fonts/3b2646a48566403a55f62ceddbecbe18.woff")format("woff"),
+        url("fonts/3b2646a48566403a55f62ceddbecbe18.svg#Hiragino Sans GB W3")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}

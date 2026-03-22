@@ -1,0 +1,41 @@
+{
+  "message": "success!",
+  "data": [
+    {
+      "id": 1,
+      "icon": "n-1.png",
+      "title": "Thanh toán online hình thức đa dạng",
+      "desc": "Chúng tôi bắt đầu bằng việc xác định rõ nội dung mà khách hàng muốn truyền tải qua website."
+    },
+    {
+      "id": 2,
+      "icon": "n-2.png",
+      "title": "Tư vấn giải pháp và báo giá",
+      "desc": "Tư vấn giải pháp website phù hợp và cung cấp báo giá trọn vẹn gói thiết kế website."
+    },
+    {
+      "id": 3,
+      "icon": "n-3.png",
+      "title": "Thiết kế giao diện",
+      "desc": "Thiết kế giao diện, chỉnh sửa theo phản hồi của khách hàng."
+    },
+    {
+      "id": 4,
+      "icon": "n-4.png",
+      "title": "Xây dựng nội dung",
+      "desc": "Phát triển thêm tính năng, cập nhật và xây dựng nội dung website."
+    },
+    {
+      "id": 5,
+      "icon": "n-5.png",
+      "title": "Kiểm tra và bàn giao",
+      "desc": "Đảm bảo website hoàn thiện trước khi bàn giao cho khách hàng."
+    },
+    {
+      "id": 6,
+      "icon": "n-6.png",
+      "title": "Hỗ trợ sau bàn giao",
+      "desc": "Hướng dẫn quản trị và bảo trì website. Bảo hành hỗ trợ giải quyết các vấn đề phát sinh."
+    }
+  ]
+}

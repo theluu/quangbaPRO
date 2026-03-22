@@ -1,0 +1,81 @@
+{
+    "message": "success!",
+    "data": {
+        "intro": {
+            "title": "QUANGBAPRO.COM",
+            "subTitle": "Giải pháp công nghệ website hàng đầu Việt Nam",
+            "desc": "Lorem ipsum dolor sit amet consectetur. Risus lacus est lectus posuere amet arcu faucibus aliquam. Risus amet odio est tristique sed lacus dapibus eros a. Quis pellentesque ut cursus non. Fusce elementum vitae velit commodo quam.",
+            "statsTitle": "QUANGBAPRO VỚI CÁC CON SỐ ẤN TƯỢNG",
+            "stats": [
+                {
+                    "id": 1,
+                    "value": "500",
+                    "suffix": "+",
+                    "label": "DỰ ÁN WEBSITE ĐÃ HOÀN THIỆN BÀN GIAO",
+                    "percent": 100
+                },
+                {
+                    "id": 2,
+                    "value": "96",
+                    "suffix": "%",
+                    "label": "KHÁCH HÀNG HÀI LÒNG & QUAY LẠI HỢP TÁC",
+                    "percent": 96
+                },
+                {
+                    "id": 3,
+                    "value": "98",
+                    "suffix": "%",
+                    "label": "TIẾN ĐỘ HOÀN THIỆN 1 WEBSITE CHUYÊN NGHIỆP",
+                    "percent": 98
+                }
+            ],
+            "image": "about-1.png"
+        },
+        "services": {
+            "title": "Dịch vụ của chúng tôi",
+            "items": [
+                {
+                    "id": 1,
+                    "label": "THIẾT KẾ WEB",
+                    "icon": "about-service-1.svg"
+                },
+                {
+                    "id": 2,
+                    "label": "THEME WP",
+                    "icon": "about-service-2.svg"
+                },
+                {
+                    "id": 3,
+                    "label": "GOOGLE ADS",
+                    "icon": "about-service-3.svg"
+                },
+                {
+                    "id": 4,
+                    "label": "FACEBOOK ADS",
+                    "icon": "about-service-4.svg"
+                },
+                {
+                    "id": 5,
+                    "label": "DỊCH VỤ SEO",
+                    "icon": "about-service-5.svg"
+                },
+                {
+                    "id": 6,
+                    "label": "SEO TỔNG THỂ",
+                    "icon": "about-service-6.svg"
+                },
+                {
+                    "id": 7,
+                    "label": "SOCIAL",
+                    "icon": "about-service-7.svg"
+                },
+                {
+                    "id": 8,
+                    "label": "TỔ CHỨC SỰ KIỆN",
+                    "icon": "about-service-8.svg"
+                }
+            ],
+            "image": "about-2.png"
+        }
+    }
+}
