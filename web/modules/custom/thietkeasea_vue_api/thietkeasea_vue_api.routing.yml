@@ -134,6 +134,14 @@ thietkeasea_vue_api.knowledge_related_news:
   requirements:
     _permission: 'access content'
 
+thietkeasea_vue_api.navigation:
+  path: '/api/v1/navigation'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::navigation'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
 thietkeasea_vue_api.placeholder_list:
   path: '/api/v1/placeholder/list/{key}'
   defaults:

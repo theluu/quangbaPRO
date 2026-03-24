@@ -1,0 +1,21 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.dialog-off-canvas-main-canvas,
+.layout-container,
+.layout-content {
+  min-height: 100vh;
+}
+
+main,
+.region-content {
+  margin: 0;
+  padding: 0;
+}

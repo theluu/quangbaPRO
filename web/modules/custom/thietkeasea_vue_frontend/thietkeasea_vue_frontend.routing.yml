@@ -1,7 +1,87 @@
+thietkeasea_vue_frontend.home:
+  path: '/'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_frontend\Controller\VueAppController::build'
+    _title: 'Home'
+  requirements:
+    _permission: 'access content'
+
 thietkeasea_vue_frontend.app:
   path: '/dashboard-vue'
   defaults:
     _controller: '\Drupal\thietkeasea_vue_frontend\Controller\VueAppController::build'
     _title: 'Vue App'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_frontend.design_web:
+  path: '/design-web'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_frontend\Controller\VueAppController::build'
+    _title: 'Design Web'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_frontend.marketing:
+  path: '/marketing'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_frontend\Controller\VueAppController::build'
+    _title: 'Marketing'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_frontend.theme_wp:
+  path: '/theme-wp'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_frontend\Controller\VueAppController::build'
+    _title: 'Theme WP'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_frontend.knowledge:
+  path: '/knowledge'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_frontend\Controller\VueAppController::build'
+    _title: 'Knowledge'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_frontend.knowledge_detail:
+  path: '/knowledge/{id}'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_frontend\Controller\VueAppController::build'
+    _title: 'Knowledge Detail'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_frontend.service_seo:
+  path: '/service-seo'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_frontend\Controller\VueAppController::build'
+    _title: 'SEO Service'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_frontend.about:
+  path: '/about'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_frontend\Controller\VueAppController::build'
+    _title: 'About'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_frontend.facebook_ads:
+  path: '/facebook-ads'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_frontend\Controller\VueAppController::build'
+    _title: 'Facebook Ads'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_frontend.google_ads:
+  path: '/google-ads'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_frontend\Controller\VueAppController::build'
+    _title: 'Google Ads'
   requirements:
     _permission: 'access content'

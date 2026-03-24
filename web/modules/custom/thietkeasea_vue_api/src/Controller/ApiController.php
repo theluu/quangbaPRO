@@ -4,6 +4,8 @@ namespace Drupal\thietkeasea_vue_api\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Menu\MenuLinkTreeInterface;
+use Drupal\Core\Menu\MenuTreeParameters;
 use Drupal\node\NodeInterface;
 use Drupal\thietkeasea_vue_api\Service\ContentMapper;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -15,12 +17,14 @@ class ApiController extends ControllerBase {
   public function __construct(
     protected EntityTypeManagerInterface $entityTypeManagerService,
     protected ContentMapper $contentMapperService,
+    protected MenuLinkTreeInterface $menuLinkTree,
   ) {}
 
   public static function create(ContainerInterface $container): static {
     return new static(
       $container->get('entity_type.manager'),
       $container->get('thietkeasea_vue_api.content_mapper'),
+      $container->get('menu.link_tree'),
     );
   }
 
@@ -185,6 +189,24 @@ class ApiController extends ControllerBase {
     ]);
   }
 
+  public function navigation(): JsonResponse {
+    $parameters = (new MenuTreeParameters())
+      ->setMaxDepth(2)
+      ->onlyEnabledLinks();
+
+    $tree = $this->menuLinkTree->load('main', $parameters);
+    $manipulators = [
+      ['callable' => 'menu.default_tree_manipulators:checkAccess'],
+      ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+    ];
+    $tree = $this->menuLinkTree->transform($tree, $manipulators);
+
+    return new JsonResponse([
+      'message' => 'success!',
+      'data' => $this->mapMenuTree($tree),
+    ]);
+  }
+
   public function placeholderList(string $key): JsonResponse {
     return new JsonResponse([
       'message' => 'success!',
@@ -256,6 +278,28 @@ class ApiController extends ControllerBase {
 
     $nodes = $this->entityTypeManagerService->getStorage('node')->loadMultiple($nids);
     return array_values(array_filter($nodes, fn ($node) => $node instanceof NodeInterface));
+  }
+
+  protected function mapMenuTree(array $tree): array {
+    $items = [];
+
+    foreach ($tree as $element) {
+      if (!$element->access || !$element->access->isAllowed()) {
+        continue;
+      }
+
+      $link = $element->link;
+      $url = $link->getUrlObject();
+
+      $items[] = [
+        'id' => $link->getPluginId(),
+        'title' => $link->getTitle(),
+        'url' => $url->isRouted() ? $url->toString() : $url->getUri(),
+        'submenu' => $this->mapMenuTree($element->subtree),
+      ];
+    }
+
+    return $items;
   }
 
 }

@@ -1,21 +1,20 @@
 <template>
   <div class="page-wrap">
-    <Banner :items="banners" />
-    <Introduction :item="introduction" />
-    <Packages :items="packages" />
-    <Services :items="services" />    
-    <Themes :items="themes" />
-    <Featured :items="featured" />    
-    <Marketing :items="marketing" />
-    <Testimonials :items="testimonials" />
-    <News :items="news" />
-    <Partners :items="partners" />    
+    <Banner v-if="banners.length" :items="banners" />
+    <Introduction v-if="hasIntroduction" :item="introduction" />
+    <Packages v-if="packages.length" :items="packages" />
+    <Services v-if="services.length" :items="services" />
+    <Themes v-if="themes.length" :items="themes" />
+    <Featured v-if="featured.length" :items="featured" />
+    <Marketing v-if="marketing.length" :items="marketing" />
+    <Testimonials v-if="testimonials.length" :items="testimonials" />
+    <News v-if="news.length" :items="news" />
+    <Partners v-if="partners.length" :items="partners" />
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
-import { useRouter } from "vue-router";
+import { computed, onMounted, ref } from "vue";
 import axios from "axios";
 
 import Banner from "@/components/home/Banner.vue";
@@ -35,82 +34,69 @@ import 'swiper/css/pagination';
 import { useAuthStore } from "@/store.js";
 
 const authStore = useAuthStore();
-const router = useRouter();
 const banners = ref([]);
 const partners = ref([]);
 const news = ref([]);
-const introduction = ref([]);
+const introduction = ref({});
 const packages = ref([]);
 const services = ref([]);
 const themes = ref([]);
 const featured = ref([]);
 const testimonials = ref([]);
 const marketing = ref([]);
+const hasIntroduction = computed(() => Object.keys(introduction.value || {}).length > 0);
 
-// Fetch dữ liệu từ file JSON bằng Axios
-const fetchData = async () => {
+const fetchEndpoint = async (url, fallback = []) => {
+  if (!url) {
+    return fallback;
+  }
+
   try {
-    const endpoint = authStore.config?.endpoint || {};
-    const [responsePartners, responseBanners, responseNews, responseIntroduction, responsePackages, responseServices, responseThemes, responseFeatured, responseTestimonial, responseMarketing] = await Promise.all([
-      axios.get(endpoint.partners).catch(err => {
-        console.error("Error fetching partners:", err);
-        return { data: { data: [] } };
-      }),
-      axios.get(endpoint.banners).catch(err => {
-        console.error("Error fetching partners:", err);
-        return { data: { data: [] } };
-      }),
-      axios.get(endpoint.newsHome).catch(err => {
-        console.error("Error fetching partners:", err);
-        return { data: { data: [] } };
-      }),
-      axios.get(endpoint.introductionHome).catch(err => {
-        console.error("Error fetching partners:", err);
-        return { data: { data: [] } };
-      }),
-      axios.get(endpoint.packages).catch(err => {
-        console.error("Error fetching partners:", err);
-        return { data: { data: [] } };
-      }),
-      axios.get(endpoint.services).catch(err => {
-        console.error("Error fetching partners:", err);
-        return { data: { data: [] } };
-      }),
-      axios.get(endpoint.themes).catch(err => {
-        console.error("Error fetching partners:", err);
-        return { data: { data: [] } };
-      }),
-      axios.get(endpoint.featured).catch(err => {
-        console.error("Error fetching partners:", err);
-        return { data: { data: [] } };
-      }),
-      axios.get(endpoint.testimonials).catch(err => {
-        console.error("Error fetching partners:", err);
-        return { data: { data: [] } };
-      }),
-      axios.get(endpoint.marketingHome).catch(err => {
-        console.error("Error fetching partners:", err);
-        return { data: { data: [] } };
-      }),
-    ]);
-
-    partners.value = responsePartners.data.data || [];
-    banners.value = responseBanners.data.data || [];
-    news.value = responseNews.data.data || [];
-    introduction.value = responseIntroduction.data.data || [];
-    packages.value = responsePackages.data.data || [];
-    services.value = responseServices.data.data || [];
-    themes.value = responseThemes.data.data || [];
-    featured.value = responseFeatured.data.data || [];
-    testimonials.value = responseTestimonial.data.data || [];
-    marketing.value = responseMarketing.data.data || [];
+    const response = await axios.get(url);
+    return response?.data?.data ?? fallback;
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error(`Error fetching ${url}:`, error);
+    return fallback;
   }
 };
-  
 
-// Gọi hàm fetchData khi component được mount
+const fetchData = async () => {
+  const endpoint = authStore.config?.endpoint || {};
+
+  const [
+    partnersData,
+    bannersData,
+    newsData,
+    packagesData,
+    servicesData,
+    themesData,
+    featuredData,
+    testimonialData,
+    marketingData,
+  ] = await Promise.all([
+    fetchEndpoint(endpoint.partners),
+    fetchEndpoint(endpoint.banners),
+    fetchEndpoint(endpoint.newsHome),
+    fetchEndpoint(endpoint.packages),
+    fetchEndpoint(endpoint.services),
+    fetchEndpoint(endpoint.themes),
+    fetchEndpoint(endpoint.featured),
+    fetchEndpoint(endpoint.testimonials),
+    fetchEndpoint(endpoint.marketingHome),
+  ]);
+
+  partners.value = Array.isArray(partnersData) ? partnersData : [];
+  banners.value = Array.isArray(bannersData) ? bannersData : [];
+  news.value = Array.isArray(newsData) ? newsData.slice(0, 6) : [];
+  introduction.value = {};
+  packages.value = Array.isArray(packagesData) ? packagesData : [];
+  services.value = Array.isArray(servicesData) ? servicesData : [];
+  themes.value = Array.isArray(themesData) ? themesData : [];
+  featured.value = Array.isArray(featuredData) ? featuredData : [];
+  testimonials.value = Array.isArray(testimonialData) ? testimonialData : [];
+  marketing.value = Array.isArray(marketingData) ? marketingData : [];
+};
+
 onMounted(() => {
   fetchData();
 });

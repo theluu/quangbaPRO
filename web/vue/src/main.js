@@ -63,8 +63,11 @@ router.isReady().then(async () => {
   // Get settings.
   const authStore = useAuthStore();
   authStore.config = window.drupalSettings || {};
-  // Check if a user is logged in.
-  authStore.loggedin = authStore.config?.user?.uid > 0 ?? false;
+  // Public marketing pages should look identical whether a Drupal user is
+  // authenticated or anonymous.
+  authStore.loggedin = authStore.config?.isPublicFrontend
+    ? false
+    : (authStore.config?.user?.uid > 0 ?? false);
 
   // console.log('Router ready, mounting app to DOM');
   app.mount('#app');

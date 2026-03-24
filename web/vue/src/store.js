@@ -4,6 +4,7 @@ import { reactive } from "vue";
 export const useAuthStore = defineStore("auth", {
   state: () => ({
     config: reactive({
+      isPublicFrontend: true,
       path: { baseUrl: "/", pathPrefix: "/", currentLanguage: "en" },
       user: { uid: 0 }, // Sử dụng reactive để đảm bảo phản ứng
       languages: {},

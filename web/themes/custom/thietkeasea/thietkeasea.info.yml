@@ -1,0 +1,9 @@
+name: Thiet Ke Asea
+type: theme
+description: 'Custom frontend theme for the Vue-integrated Drupal site.'
+core_version_requirement: ^10 || ^11
+base theme: false
+libraries:
+  - thietkeasea/global
+regions:
+  content: Content

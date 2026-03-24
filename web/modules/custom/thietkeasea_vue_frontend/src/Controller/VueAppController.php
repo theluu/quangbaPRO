@@ -12,7 +12,12 @@ class VueAppController extends ControllerBase {
       '#type' => 'container',
       '#attributes' => ['id' => 'app'],
       '#attached' => [
+        'library' => [
+          'core/drupal',
+          'core/drupalSettings',
+        ],
         'drupalSettings' => [
+          'isPublicFrontend' => TRUE,
           'user' => [
             'uid' => (int) $this->currentUser()->id(),
             'name' => $this->currentUser()->getAccountName(),
@@ -35,7 +40,6 @@ class VueAppController extends ControllerBase {
     $root = \Drupal::root();
     $cssPath = '/vue/dist/index.css';
     $jsPath = '/vue/dist/index.js';
-    $drupalSettingsPath = '/vue/dist/drupalSettings.js';
     $circularProgressPath = '/vue/node_modules/circular-progress-bar/dist/circularProgressBar.min.js';
 
     if (is_file($root . $cssPath)) {
@@ -43,16 +47,6 @@ class VueAppController extends ControllerBase {
         'rel' => 'stylesheet',
         'href' => $cssPath,
       ], 'thietkeasea_vue_frontend_css'];
-    }
-
-    if (is_file($root . $drupalSettingsPath)) {
-      $build['#attached']['html_head'][] = [[
-        '#tag' => 'script',
-        '#attributes' => [
-          'src' => $drupalSettingsPath,
-          'type' => 'application/javascript',
-        ],
-      ], 'thietkeasea_vue_frontend_drupal_settings_polyfill'];
     }
 
     if (is_file($root . $circularProgressPath)) {
@@ -107,23 +101,26 @@ class VueAppController extends ControllerBase {
       'googleAdsStrategies',
       'googleAdsProcess',
       'googleAdsCommitment',
-      'navigation',
     ];
 
     $endpoints = [
+      'navigation' => Url::fromRoute('thietkeasea_vue_api.navigation')->toString(),
       'banners' => Url::fromRoute('thietkeasea_vue_api.banners')->toString(),
       'services' => Url::fromRoute('thietkeasea_vue_api.services')->toString(),
       'marketing' => Url::fromRoute('thietkeasea_vue_api.marketing')->toString(),
+      'marketingHome' => Url::fromRoute('thietkeasea_vue_api.marketing')->toString(),
       'packages' => Url::fromRoute('thietkeasea_vue_api.packages')->toString(),
       'wppackages' => Url::fromRoute('thietkeasea_vue_api.wppackages')->toString(),
       'themes' => Url::fromRoute('thietkeasea_vue_api.themes')->toString(),
       'wpfeatured' => Url::fromRoute('thietkeasea_vue_api.wpfeatured')->toString(),
+      'featured' => Url::fromRoute('thietkeasea_vue_api.wpfeatured')->toString(),
       'wpwhy' => Url::fromRoute('thietkeasea_vue_api.wpwhy')->toString(),
       'partners' => Url::fromRoute('thietkeasea_vue_api.partners')->toString(),
       'testimonials' => Url::fromRoute('thietkeasea_vue_api.testimonials')->toString(),
       'faqs' => Url::fromRoute('thietkeasea_vue_api.faqs')->toString(),
       'wpfaq' => Url::fromRoute('thietkeasea_vue_api.wpfaq')->toString(),
       'knowledgeList' => Url::fromRoute('thietkeasea_vue_api.knowledge_list')->toString(),
+      'newsHome' => Url::fromRoute('thietkeasea_vue_api.knowledge_list')->toString(),
       'knowledgeDetail' => Url::fromRoute('thietkeasea_vue_api.knowledge_detail')->toString(),
       'knowledgeCategories' => Url::fromRoute('thietkeasea_vue_api.knowledge_categories')->toString(),
       'knowledgeTopics' => Url::fromRoute('thietkeasea_vue_api.knowledge_topics')->toString(),
@@ -131,7 +128,9 @@ class VueAppController extends ControllerBase {
     ];
 
     foreach ($listPlaceholderKeys as $key) {
-      $endpoints[$key] = Url::fromRoute('thietkeasea_vue_api.placeholder_list', ['key' => $key])->toString();
+      if (!isset($endpoints[$key])) {
+        $endpoints[$key] = Url::fromRoute('thietkeasea_vue_api.placeholder_list', ['key' => $key])->toString();
+      }
     }
 
     return $endpoints;

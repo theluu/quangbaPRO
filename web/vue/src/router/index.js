@@ -9,7 +9,9 @@ import Facebook from '../views/Facebook.vue'
 import GoogleAds from '../views/GoogleAds.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  // Keep the SPA mounted at the site root/dashboard routes in Drupal.
+  // Vite's build base is only for static assets under /vue/dist/.
+  history: createWebHistory('/'),
   routes: [
     {
       path: '/',
