@@ -1,0 +1,8 @@
+name: 'QB Contact Lead'
+type: module
+description: 'Provides a JSON endpoint for saving consultation leads into Drupal contact messages.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:node
+  - drupal:text

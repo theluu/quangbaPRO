@@ -1,0 +1,130 @@
+<?php
+
+use Drupal\Core\Entity\Entity\EntityFormDisplay;
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\node\Entity\NodeType;
+
+/**
+ * Implements hook_install().
+ */
+function qb_contact_lead_install(): void {
+  qb_contact_lead_ensure_contact_content_type();
+}
+
+/**
+ * Creates the contact content type and required fields if missing.
+ */
+function qb_contact_lead_ensure_contact_content_type(): void {
+  if (!NodeType::load('qb_contact')) {
+    $type = NodeType::create([
+      'type' => 'qb_contact',
+      'name' => 'QB Contact',
+      'description' => 'Stores contact leads submitted from the website.',
+      'new_revision' => FALSE,
+      'preview_mode' => 0,
+      'display_submitted' => FALSE,
+    ]);
+    $type->save();
+  }
+
+  $fields = [
+    'field_qb_contact_name' => [
+      'label' => 'Name',
+      'type' => 'string',
+    ],
+    'field_qb_contact_phone' => [
+      'label' => 'Phone',
+      'type' => 'string',
+    ],
+    'field_qb_contact_email' => [
+      'label' => 'Email',
+      'type' => 'string',
+    ],
+    'field_qb_contact_note' => [
+      'label' => 'Note',
+      'type' => 'text_long',
+    ],
+  ];
+
+  foreach ($fields as $field_name => $definition) {
+    if (!FieldStorageConfig::loadByName('node', $field_name)) {
+      FieldStorageConfig::create([
+        'field_name' => $field_name,
+        'entity_type' => 'node',
+        'type' => $definition['type'],
+        'cardinality' => 1,
+      ])->save();
+    }
+
+    if (!FieldConfig::loadByName('node', 'qb_contact', $field_name)) {
+      FieldConfig::create([
+        'field_name' => $field_name,
+        'entity_type' => 'node',
+        'bundle' => 'qb_contact',
+        'label' => $definition['label'],
+      ])->save();
+    }
+  }
+
+  $form_display = EntityFormDisplay::load('node.qb_contact.default')
+    ?: EntityFormDisplay::create([
+      'targetEntityType' => 'node',
+      'bundle' => 'qb_contact',
+      'mode' => 'default',
+      'status' => TRUE,
+    ]);
+
+  $form_display->setComponent('title', [
+    'type' => 'string_textfield',
+    'weight' => 0,
+  ]);
+  $form_display->setComponent('field_qb_contact_name', [
+    'type' => 'string_textfield',
+    'weight' => 1,
+  ]);
+  $form_display->setComponent('field_qb_contact_phone', [
+    'type' => 'string_textfield',
+    'weight' => 2,
+  ]);
+  $form_display->setComponent('field_qb_contact_email', [
+    'type' => 'string_textfield',
+    'weight' => 3,
+  ]);
+  $form_display->setComponent('field_qb_contact_note', [
+    'type' => 'text_textarea',
+    'weight' => 4,
+  ]);
+  $form_display->save();
+
+  $view_display = EntityViewDisplay::load('node.qb_contact.default')
+    ?: EntityViewDisplay::create([
+      'targetEntityType' => 'node',
+      'bundle' => 'qb_contact',
+      'mode' => 'default',
+      'status' => TRUE,
+    ]);
+
+  $view_display->setComponent('field_qb_contact_name', [
+    'label' => 'above',
+    'type' => 'string',
+    'weight' => 0,
+  ]);
+  $view_display->setComponent('field_qb_contact_phone', [
+    'label' => 'above',
+    'type' => 'string',
+    'weight' => 1,
+  ]);
+  $view_display->setComponent('field_qb_contact_email', [
+    'label' => 'above',
+    'type' => 'string',
+    'weight' => 2,
+  ]);
+  $view_display->setComponent('field_qb_contact_note', [
+    'label' => 'above',
+    'type' => 'text_default',
+    'weight' => 3,
+  ]);
+  $view_display->save();
+}

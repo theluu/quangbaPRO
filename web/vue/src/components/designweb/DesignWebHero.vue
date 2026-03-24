@@ -89,28 +89,53 @@ const formData = reactive({
   name: '',
   phone: '',
   email: '',
-  note: '',
-  agree: false
+  note: ''
 });
 
-const handleSubmit = () => {
-  if (!formData.agree) {
-    alert('Vui lòng đồng ý với điều khoản sử dụng');
+const isSubmitting = ref(false);
+
+const handleSubmit = async () => {
+  if (isSubmitting.value) {
     return;
   }
-  
-  console.log('Form submitted:', formData);
-  // TODO: Add API call here
-  alert('Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ trong thời gian sớm nhất.');
-  
-  // Reset form
-  Object.assign(formData, {
-    name: '',
-    phone: '',
-    email: '',
-    note: '',
-    agree: false
-  });
+
+  isSubmitting.value = true;
+
+  try {
+    const response = await fetch('/api/contact/lead', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        note: formData.note
+      })
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.message || 'Gửi thông tin thất bại.');
+    }
+
+    alert('Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ trong thời gian sớm nhất.');
+
+    Object.assign(formData, {
+      name: '',
+      phone: '',
+      email: '',
+      note: ''
+    });
+  }
+  catch (error) {
+    alert(error.message || 'Có lỗi xảy ra, vui lòng thử lại sau.');
+  }
+  finally {
+    isSubmitting.value = false;
+  }
 };
 </script>
 

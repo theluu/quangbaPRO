@@ -1,0 +1,7 @@
+qb_contact_lead.submit:
+  path: '/api/contact/lead'
+  defaults:
+    _controller: '\Drupal\qb_contact_lead\Controller\ContactLeadController::submit'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'
