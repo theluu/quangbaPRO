@@ -3,6 +3,7 @@
 namespace Drupal\thietkeasea_vue_api\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Menu\MenuLinkTreeInterface;
 use Drupal\Core\Menu\MenuTreeParameters;
@@ -16,6 +17,7 @@ class ApiController extends ControllerBase {
 
   public function __construct(
     protected EntityTypeManagerInterface $entityTypeManagerService,
+    protected EntityFieldManagerInterface $entityFieldManager,
     protected ContentMapper $contentMapperService,
     protected MenuLinkTreeInterface $menuLinkTree,
   ) {}
@@ -23,6 +25,7 @@ class ApiController extends ControllerBase {
   public static function create(ContainerInterface $container): static {
     return new static(
       $container->get('entity_type.manager'),
+      $container->get('entity_field.manager'),
       $container->get('thietkeasea_vue_api.content_mapper'),
       $container->get('menu.link_tree'),
     );
@@ -207,6 +210,26 @@ class ApiController extends ControllerBase {
     ]);
   }
 
+  public function search(Request $request): JsonResponse {
+    $keyword = trim((string) $request->query->get('q', ''));
+    if ($keyword === '') {
+      return new JsonResponse([
+        'message' => 'success',
+        'keyword' => '',
+        'data' => [],
+      ]);
+    }
+
+    $nodes = $this->searchKnowledgeNodes($keyword);
+    $data = array_map([$this->contentMapperService, 'mapKnowledgeListNode'], $nodes);
+
+    return new JsonResponse([
+      'message' => 'success',
+      'keyword' => $keyword,
+      'data' => $data,
+    ]);
+  }
+
   public function placeholderList(string $key): JsonResponse {
     return new JsonResponse([
       'message' => 'success!',
@@ -300,6 +323,45 @@ class ApiController extends ControllerBase {
     }
 
     return $items;
+  }
+
+  /**
+   * @return \Drupal\node\NodeInterface[]
+   */
+  protected function searchKnowledgeNodes(string $keyword, int $limit = 24): array {
+    $storage = $this->entityTypeManagerService->getStorage('node');
+    $query = $storage->getQuery()
+      ->condition('type', 'qb_knowledge')
+      ->condition('status', 1)
+      ->accessCheck(TRUE)
+      ->sort('created', 'DESC')
+      ->range(0, $limit);
+
+    $fieldDefinitions = $this->entityFieldManager->getFieldDefinitions('node', 'qb_knowledge');
+    $orGroup = $query->orConditionGroup()
+      ->condition('title', $keyword, 'CONTAINS');
+
+    $optionalFields = [
+      'field_summary' => 'field_summary.value',
+      'body' => 'body.value',
+      'field_intro_html' => 'field_intro_html.value',
+    ];
+
+    foreach ($optionalFields as $fieldName => $queryField) {
+      if (isset($fieldDefinitions[$fieldName])) {
+        $orGroup->condition($queryField, $keyword, 'CONTAINS');
+      }
+    }
+
+    $query->condition($orGroup);
+
+    $nids = $query->execute();
+    if (!$nids) {
+      return [];
+    }
+
+    $nodes = $storage->loadMultiple($nids);
+    return array_values(array_filter($nodes, fn ($node) => $node instanceof NodeInterface));
   }
 
 }

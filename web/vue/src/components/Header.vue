@@ -230,6 +230,8 @@
                    <input 
                      ref="mobileSearchInput"
                      type="text" 
+                     v-model.trim="searchKeyword"
+                     @keyup.enter="submitSearch"
                      class="form-control border-0 text-center fs-3 shadow-none bg-transparent" 
                      placeholder="Nhập từ khóa..."
                    />
@@ -242,6 +244,7 @@
                        v-for="(tag, index) in searchTags" 
                        :key="index" 
                        href="#" 
+                       @click.prevent="applySearchTag(tag)"
                        class="search-tag text-decoration-none"
                      >
                        {{ tag }}
@@ -261,6 +264,8 @@
               <input 
                 ref="searchInput"
                 type="text" 
+                v-model.trim="searchKeyword"
+                @keyup.enter="submitSearch"
                 class="form-control border-0 text-center search-input shadow-none" 
                 placeholder="NHẬP TỪ KHÓA TÌM KIẾM"
               />
@@ -273,6 +278,7 @@
                   v-for="(tag, index) in searchTags" 
                   :key="index" 
                   href="#" 
+                  @click.prevent="applySearchTag(tag)"
                   class="search-tag text-decoration-none"
                 >
                   {{ tag }}
@@ -297,6 +303,7 @@ export default defineComponent({
     return {
       isMobileMenuOpen: false,
       isSearchOpen: false,
+      searchKeyword: '',
       activeSubmenu: null,
       navigation: [],
       searchTags: [
@@ -350,6 +357,22 @@ export default defineComponent({
           }
         });
       }
+    },
+    submitSearch() {
+      const keyword = this.searchKeyword.trim();
+      this.isSearchOpen = false;
+      if (!keyword) {
+        this.$router.push({ name: 'search' });
+        return;
+      }
+      this.$router.push({
+        name: 'search',
+        query: { q: keyword },
+      });
+    },
+    applySearchTag(tag) {
+      this.searchKeyword = tag;
+      this.submitSearch();
     }
   }
 });

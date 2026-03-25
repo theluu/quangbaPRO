@@ -85,3 +85,11 @@ thietkeasea_vue_frontend.google_ads:
     _title: 'Google Ads'
   requirements:
     _permission: 'access content'
+
+thietkeasea_vue_frontend.search:
+  path: '/tim-kiem'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_frontend\Controller\VueAppController::build'
+    _title: 'Search'
+  requirements:
+    _permission: 'access content'

@@ -4,6 +4,7 @@ import { createPinia } from 'pinia'
 import i18n from './i18n.js';
 import App from './App.vue'
 import router from './router'
+import AppLink from './components/AppLink.js'
 import Toast from "vue-toastification";
 // import { Tooltip } from 'ant-design-vue';
 // import Antd from 'ant-design-vue';
@@ -52,6 +53,7 @@ app.use(i18n)
 app.use(createPinia())
 app.use(router)
 app.use(Toast, options)
+app.component('RouterLink', AppLink)
 // app.use(VueTelInput)
 // app.component('font-awesome-icon', FontAwesomeIcon)
 // app.use(Tooltip)

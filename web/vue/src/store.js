@@ -50,6 +50,7 @@ export const useAuthStore = defineStore("auth", {
         googleAdsProcess: "",
         googleAdsCommitment: "",
         navigation: "",
+        search: "",
       },
     }),
     loggedin: false,

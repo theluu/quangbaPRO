@@ -4,13 +4,30 @@ namespace Drupal\thietkeasea_vue_frontend\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class VueAppController extends ControllerBase {
 
+  protected RequestStack $requestStack;
+
+  public function __construct(RequestStack $request_stack) {
+    $this->requestStack = $request_stack;
+  }
+
+  public static function create(ContainerInterface $container): static {
+    return new static(
+      $container->get('request_stack')
+    );
+  }
+
   public function build(): array {
+    $seo = $this->getSeoData();
+
     $build = [
       '#type' => 'container',
       '#attributes' => ['id' => 'app'],
+      '#title' => $seo['title'],
       '#attached' => [
         'library' => [
           'core/drupal',
@@ -32,8 +49,110 @@ class VueAppController extends ControllerBase {
       ],
     ];
 
+    $build['#attached']['html_head'][] = [[
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'description',
+        'content' => $seo['description'],
+      ],
+    ], 'thietkeasea_vue_frontend_meta_description'];
+
+    $build['#attached']['html_head'][] = [[
+      '#tag' => 'meta',
+      '#attributes' => [
+        'property' => 'og:title',
+        'content' => $seo['title'],
+      ],
+    ], 'thietkeasea_vue_frontend_og_title'];
+
+    $build['#attached']['html_head'][] = [[
+      '#tag' => 'meta',
+      '#attributes' => [
+        'property' => 'og:description',
+        'content' => $seo['description'],
+      ],
+    ], 'thietkeasea_vue_frontend_og_description'];
+
+    $build['#attached']['html_head'][] = [[
+      '#tag' => 'meta',
+      '#attributes' => [
+        'property' => 'og:url',
+        'content' => $seo['canonical'],
+      ],
+    ], 'thietkeasea_vue_frontend_og_url'];
+
+    $build['#attached']['html_head_link'][] = [[
+      'rel' => 'canonical',
+      'href' => $seo['canonical'],
+    ], 'thietkeasea_vue_frontend_canonical'];
+
     $this->attachVueAssets($build);
     return $build;
+  }
+
+  protected function getSeoData(): array {
+    $request = $this->requestStack->getCurrentRequest();
+    $path = rtrim($request->getPathInfo(), '/') ?: '/';
+    $host = $request->getSchemeAndHttpHost();
+
+    $map = [
+      '/' => [
+        'title' => 'QuangBaPRO | Thiet ke web va marketing',
+        'description' => 'QuangBaPRO cung cap dich vu thiet ke website, SEO, Facebook Ads va Google Ads.',
+      ],
+      '/dashboard-vue' => [
+        'title' => 'QuangBaPRO | Thiet ke web va marketing',
+        'description' => 'QuangBaPRO cung cap dich vu thiet ke website, SEO, Facebook Ads va Google Ads.',
+      ],
+      '/design-web' => [
+        'title' => 'Thiet ke web theo yeu cau | QuangBaPRO',
+        'description' => 'Dich vu thiet ke web theo yeu cau voi giao dien doc quyen, toi uu chuyen doi va than thien SEO.',
+      ],
+      '/marketing' => [
+        'title' => 'Dich vu marketing tong the | QuangBaPRO',
+        'description' => 'Giai phap marketing tong the giup doanh nghiep tang nhan dien thuong hieu va chuyen doi.',
+      ],
+      '/theme-wp' => [
+        'title' => 'Theme WordPress | QuangBaPRO',
+        'description' => 'Kho giao dien WordPress va giai phap website ban hang, gioi thieu doanh nghiep.',
+      ],
+      '/knowledge' => [
+        'title' => 'Kien thuc marketing va website | QuangBaPRO',
+        'description' => 'Tong hop bai viet ve website, SEO, Facebook Ads, Google Ads va marketing online.',
+      ],
+      '/service-seo' => [
+        'title' => 'Dich vu SEO tong the | QuangBaPRO',
+        'description' => 'Dich vu SEO tong the giup website tang thu hang ben vung va mo rong luong truy cap tu nhien.',
+      ],
+      '/about' => [
+        'title' => 'Gioi thieu QuangBaPRO',
+        'description' => 'Thong tin gioi thieu ve QuangBaPRO, tam nhin, su menh va cac dich vu dang cung cap.',
+      ],
+      '/facebook-ads' => [
+        'title' => 'Dich vu Facebook Ads | QuangBaPRO',
+        'description' => 'Giai phap Facebook Ads giup tiep can dung khach hang muc tieu va toi uu chi phi quang cao.',
+      ],
+      '/google-ads' => [
+        'title' => 'Dich vu Google Ads | QuangBaPRO',
+        'description' => 'Dich vu Google Ads giup tang lead, don hang va do luong hieu qua theo tung chien dich.',
+      ],
+    ];
+
+    if (str_starts_with($path, '/knowledge/')) {
+      $seo = [
+        'title' => 'Chi tiet bai viet kien thuc | QuangBaPRO',
+        'description' => 'Noi dung kien thuc chuyen sau ve website, SEO va marketing online.',
+      ];
+    }
+    else {
+      $seo = $map[$path] ?? [
+        'title' => 'QuangBaPRO',
+        'description' => 'Dich vu thiet ke web, SEO va marketing online.',
+      ];
+    }
+
+    $seo['canonical'] = $host . $request->getRequestUri();
+    return $seo;
   }
 
   protected function attachVueAssets(array &$build): void {
@@ -105,6 +224,7 @@ class VueAppController extends ControllerBase {
 
     $endpoints = [
       'navigation' => Url::fromRoute('thietkeasea_vue_api.navigation')->toString(),
+      'search' => Url::fromRoute('thietkeasea_vue_api.search')->toString(),
       'banners' => Url::fromRoute('thietkeasea_vue_api.banners')->toString(),
       'services' => Url::fromRoute('thietkeasea_vue_api.services')->toString(),
       'marketing' => Url::fromRoute('thietkeasea_vue_api.marketing')->toString(),

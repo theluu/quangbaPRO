@@ -142,6 +142,14 @@ thietkeasea_vue_api.navigation:
   requirements:
     _permission: 'access content'
 
+thietkeasea_vue_api.search:
+  path: '/api/v1/search'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::search'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
 thietkeasea_vue_api.placeholder_list:
   path: '/api/v1/placeholder/list/{key}'
   defaults:
