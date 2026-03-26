@@ -1,0 +1,5 @@
+qb_contact_lead.settings:
+  title: 'QB Contact Lead'
+  description: 'Configure Google reCAPTCHA v3 for contact lead submissions.'
+  route_name: qb_contact_lead.settings
+  parent: system.admin_config_system

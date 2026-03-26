@@ -5,3 +5,11 @@ qb_contact_lead.submit:
   methods: [POST]
   requirements:
     _permission: 'access content'
+
+qb_contact_lead.settings:
+  path: '/admin/config/system/qb-contact-lead'
+  defaults:
+    _form: '\Drupal\qb_contact_lead\Form\QbContactLeadSettingsForm'
+    _title: 'QB Contact Lead settings'
+  requirements:
+    _permission: 'administer site configuration'

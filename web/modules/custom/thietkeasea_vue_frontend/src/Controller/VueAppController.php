@@ -35,6 +35,7 @@ class VueAppController extends ControllerBase {
         ],
         'drupalSettings' => [
           'isPublicFrontend' => TRUE,
+          'recaptchaV3SiteKey' => $this->config('qb_contact_lead.settings')->get('recaptcha_v3_site_key') ?? '',
           'user' => [
             'uid' => (int) $this->currentUser()->id(),
             'name' => $this->currentUser()->getAccountName(),
@@ -85,6 +86,18 @@ class VueAppController extends ControllerBase {
       'rel' => 'canonical',
       'href' => $seo['canonical'],
     ], 'thietkeasea_vue_frontend_canonical'];
+
+    $recaptcha_site_key = $this->config('qb_contact_lead.settings')->get('recaptcha_v3_site_key');
+    if (!empty($recaptcha_site_key)) {
+      $build['#attached']['html_head'][] = [[
+        '#tag' => 'script',
+        '#attributes' => [
+          'src' => 'https://www.google.com/recaptcha/api.js?render=' . $recaptcha_site_key,
+          'async' => TRUE,
+          'defer' => TRUE,
+        ],
+      ], 'thietkeasea_vue_frontend_recaptcha_v3'];
+    }
 
     $this->attachVueAssets($build);
     return $build;

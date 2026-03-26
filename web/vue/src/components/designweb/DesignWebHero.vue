@@ -59,9 +59,9 @@
               <div class="form-group">
                 <textarea class="form-control" v-model="formData.note" placeholder="Lĩnh vực, ghi chú"></textarea>
               </div>
-              <div class="form-group captcha">
+              <!-- <div class="form-group captcha">
                 <img src="@/assets/images/design-web/textbox.png" alt=""/>
-              </div>
+              </div> -->
               <button type="submit" class="btn btn-submit w-100 text-uppercase fw-semibold text-primary-color">
                 Đăng ký
               </button>
@@ -77,6 +77,7 @@
 <script setup>
 import { ref, reactive } from 'vue';
 
+const RECAPTCHA_ACTION = 'contact_lead_submit';
 const features = [
   'Sáng tạo phong cách riêng - Không trùng lặp',
   'Đáp ứng đầy đủ yêu cầu về tính năng, nội dung, thiết kế của dự án',
@@ -94,6 +95,32 @@ const formData = reactive({
 
 const isSubmitting = ref(false);
 
+const getRecaptchaToken = async () => {
+  const siteKey = window.drupalSettings?.recaptchaV3SiteKey;
+
+  if (!siteKey) {
+    return '';
+  }
+
+  if (!window.grecaptcha || typeof window.grecaptcha.execute !== 'function') {
+    throw new Error('reCAPTCHA chưa sẵn sàng. Vui lòng thử lại sau ít giây.');
+  }
+
+  return new Promise((resolve, reject) => {
+    window.grecaptcha.ready(async () => {
+      try {
+        const token = await window.grecaptcha.execute(siteKey, {
+          action: RECAPTCHA_ACTION
+        });
+        resolve(token);
+      }
+      catch (error) {
+        reject(error);
+      }
+    });
+  });
+};
+
 const handleSubmit = async () => {
   if (isSubmitting.value) {
     return;
@@ -102,6 +129,8 @@ const handleSubmit = async () => {
   isSubmitting.value = true;
 
   try {
+    const recaptchaToken = await getRecaptchaToken();
+
     const response = await fetch('/api/contact/lead', {
       method: 'POST',
       headers: {
@@ -111,7 +140,9 @@ const handleSubmit = async () => {
         name: formData.name,
         phone: formData.phone,
         email: formData.email,
-        note: formData.note
+        note: formData.note,
+        recaptchaToken,
+        recaptchaAction: RECAPTCHA_ACTION
       })
     });
 

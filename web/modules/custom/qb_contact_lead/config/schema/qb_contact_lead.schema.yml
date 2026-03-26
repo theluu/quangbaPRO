@@ -1,0 +1,10 @@
+qb_contact_lead.settings:
+  type: config_object
+  label: 'QB Contact Lead settings'
+  mapping:
+    recaptcha_v3_site_key:
+      type: string
+      label: 'Google reCAPTCHA v3 site key'
+    recaptcha_v3_secret_key:
+      type: string
+      label: 'Google reCAPTCHA v3 secret key'
