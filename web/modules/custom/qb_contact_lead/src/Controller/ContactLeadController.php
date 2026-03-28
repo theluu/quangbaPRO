@@ -56,6 +56,7 @@ class ContactLeadController extends ControllerBase {
     $phone = trim((string) ($data['phone'] ?? ''));
     $email = trim((string) ($data['email'] ?? ''));
     $note = trim((string) ($data['note'] ?? ''));
+    $source_page = trim((string) ($data['sourcePage'] ?? ''));
     $recaptcha_token = trim((string) ($data['recaptchaToken'] ?? ''));
     $recaptcha_action = trim((string) ($data['recaptchaAction'] ?? 'contact_lead_submit'));
 
@@ -63,6 +64,20 @@ class ContactLeadController extends ControllerBase {
       return new JsonResponse([
         'status' => 'error',
         'message' => 'Name, phone, and email are required.',
+      ], 422);
+    }
+
+    if (mb_strlen($name) < 2) {
+      return new JsonResponse([
+        'status' => 'error',
+        'message' => 'Name must be at least 2 characters long.',
+      ], 422);
+    }
+
+    if (!preg_match('/^[0-9+\s().-]{8,20}$/', $phone)) {
+      return new JsonResponse([
+        'status' => 'error',
+        'message' => 'Phone number is invalid.',
       ], 422);
     }
 
@@ -101,6 +116,14 @@ class ContactLeadController extends ControllerBase {
     }
 
     try {
+      $note_parts = [];
+      if ($source_page !== '') {
+        $note_parts[] = 'Nguon form: ' . $source_page;
+      }
+      if ($note !== '') {
+        $note_parts[] = $note;
+      }
+
       $title = sprintf(
         'Lead %s - %s',
         $name,
@@ -117,7 +140,7 @@ class ContactLeadController extends ControllerBase {
           'field_qb_contact_phone' => $phone,
           'field_qb_contact_email' => $email,
           'field_qb_contact_note' => [
-            'value' => $note,
+            'value' => implode(PHP_EOL . PHP_EOL, $note_parts),
             'format' => 'plain_text',
           ],
         ]);
