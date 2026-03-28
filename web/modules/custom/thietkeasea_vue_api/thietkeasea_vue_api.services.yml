@@ -6,3 +6,10 @@ services:
       - '@date.formatter'
       - '@file_url_generator'
       - '@path_alias.manager'
+  thietkeasea_vue_api.demo_content_importer:
+    class: Drupal\thietkeasea_vue_api\Service\DemoContentImporter
+    arguments:
+      - '@entity_type.manager'
+      - '@file_system'
+      - '@file.repository'
+      - '@logger.factory'

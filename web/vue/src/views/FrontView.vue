@@ -67,6 +67,7 @@ const fetchData = async () => {
     partnersData,
     bannersData,
     newsData,
+    introductionData,
     packagesData,
     servicesData,
     themesData,
@@ -77,6 +78,7 @@ const fetchData = async () => {
     fetchEndpoint(endpoint.partners),
     fetchEndpoint(endpoint.banners),
     fetchEndpoint(endpoint.newsHome),
+    fetchEndpoint(endpoint.introductionHome, {}),
     fetchEndpoint(endpoint.packages),
     fetchEndpoint(endpoint.services),
     fetchEndpoint(endpoint.themes),
@@ -88,7 +90,7 @@ const fetchData = async () => {
   partners.value = Array.isArray(partnersData) ? partnersData : [];
   banners.value = Array.isArray(bannersData) ? bannersData : [];
   news.value = Array.isArray(newsData) ? newsData.slice(0, 6) : [];
-  introduction.value = {};
+  introduction.value = introductionData && typeof introductionData === 'object' ? introductionData : {};
   packages.value = Array.isArray(packagesData) ? packagesData : [];
   services.value = Array.isArray(servicesData) ? servicesData : [];
   themes.value = Array.isArray(themesData) ? themesData : [];

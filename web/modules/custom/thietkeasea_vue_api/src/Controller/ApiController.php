@@ -33,6 +33,10 @@ class ApiController extends ControllerBase {
 
   public function banners(): JsonResponse {
     $nodes = $this->loadNodesByType('qb_banner');
+    if (!$nodes) {
+      return $this->jsonFixtureResponse('banners');
+    }
+
     $data = array_map([$this->contentMapperService, 'mapBannerNode'], $nodes);
 
     return new JsonResponse([
@@ -43,6 +47,10 @@ class ApiController extends ControllerBase {
 
   public function services(): JsonResponse {
     $nodes = $this->loadNodesByTypeAndField('qb_service', 'field_service_type', 'industry');
+    if (!$nodes) {
+      return $this->jsonFixtureResponse('services');
+    }
+
     $data = array_map([$this->contentMapperService, 'mapServiceNode'], $nodes);
 
     return new JsonResponse([
@@ -53,6 +61,10 @@ class ApiController extends ControllerBase {
 
   public function marketing(): JsonResponse {
     $nodes = $this->loadNodesByTypeAndField('qb_service', 'field_service_type', 'marketing');
+    if (!$nodes) {
+      return $this->jsonFixtureResponse('marketing');
+    }
+
     $data = array_map([$this->contentMapperService, 'mapServiceNode'], $nodes);
 
     return new JsonResponse([
@@ -63,6 +75,10 @@ class ApiController extends ControllerBase {
 
   public function packages(): JsonResponse {
     $nodes = $this->loadNodesByType('qb_package');
+    if (!$nodes) {
+      return $this->jsonFixtureResponse('packages');
+    }
+
     $data = array_map([$this->contentMapperService, 'mapPackageNode'], $nodes);
 
     return new JsonResponse([
@@ -77,6 +93,10 @@ class ApiController extends ControllerBase {
 
   public function themes(): JsonResponse {
     $nodes = $this->loadNodesByTypeAndField('qb_theme', 'field_theme_type', 'theme');
+    if (!$nodes) {
+      return $this->jsonFixtureResponse('theme');
+    }
+
     $data = array_map([$this->contentMapperService, 'mapThemeNode'], $nodes);
 
     return new JsonResponse([
@@ -87,6 +107,10 @@ class ApiController extends ControllerBase {
 
   public function wpFeatured(): JsonResponse {
     $nodes = $this->loadNodesByTypeAndField('qb_theme', 'field_theme_type', 'wp_featured');
+    if (!$nodes) {
+      return $this->jsonFixtureResponse('wpfeatured');
+    }
+
     $data = array_map([$this->contentMapperService, 'mapThemeNode'], $nodes);
 
     return new JsonResponse([
@@ -97,6 +121,10 @@ class ApiController extends ControllerBase {
 
   public function wpWhy(): JsonResponse {
     $nodes = $this->loadNodesByTypeAndField('qb_theme', 'field_theme_type', 'wp_why');
+    if (!$nodes) {
+      return $this->jsonFixtureResponse('wpwhy');
+    }
+
     $data = array_map([$this->contentMapperService, 'mapThemeNode'], $nodes);
 
     return new JsonResponse([
@@ -107,6 +135,10 @@ class ApiController extends ControllerBase {
 
   public function partners(): JsonResponse {
     $nodes = $this->loadNodesByType('qb_partner');
+    if (!$nodes) {
+      return $this->jsonFixtureResponse('partners');
+    }
+
     $data = array_map([$this->contentMapperService, 'mapPartnerNode'], $nodes);
 
     return new JsonResponse([
@@ -117,6 +149,10 @@ class ApiController extends ControllerBase {
 
   public function testimonials(): JsonResponse {
     $nodes = $this->loadNodesByType('qb_testimonials');
+    if (!$nodes) {
+      return $this->jsonFixtureResponse('testimonials');
+    }
+
     $data = array_map([$this->contentMapperService, 'mapTestimonialNode'], $nodes);
 
     return new JsonResponse([
@@ -127,6 +163,10 @@ class ApiController extends ControllerBase {
 
   public function faqs(): JsonResponse {
     $nodes = $this->loadNodesByTypeAndField('qb_faq', 'field_faq_type', 'designweb');
+    if (!$nodes) {
+      return $this->jsonFixtureResponse('faqs');
+    }
+
     $data = array_map([$this->contentMapperService, 'mapFaqNode'], $nodes);
 
     return new JsonResponse([
@@ -137,6 +177,10 @@ class ApiController extends ControllerBase {
 
   public function wpFaq(): JsonResponse {
     $nodes = $this->loadNodesByTypeAndField('qb_faq', 'field_faq_type', 'wp');
+    if (!$nodes) {
+      return $this->jsonFixtureResponse('wpfaq');
+    }
+
     $data = array_map([$this->contentMapperService, 'mapFaqNode'], $nodes);
 
     return new JsonResponse([
@@ -147,6 +191,10 @@ class ApiController extends ControllerBase {
 
   public function knowledgeList(): JsonResponse {
     $nodes = $this->loadNodesByType('qb_knowledge');
+    if (!$nodes) {
+      return $this->jsonFixtureResponse('knowledgeList');
+    }
+
     $data = array_map([$this->contentMapperService, 'mapKnowledgeListNode'], $nodes);
 
     return new JsonResponse([
@@ -157,6 +205,10 @@ class ApiController extends ControllerBase {
 
   public function knowledgeDetail(Request $request): JsonResponse {
     $node = $this->resolveKnowledgeNode($request);
+    if (!$node) {
+      return $this->jsonFixtureResponse('knowledgeDetail');
+    }
+
     $data = $node ? $this->contentMapperService->mapKnowledgeDetailNode($node) : [];
 
     return new JsonResponse([
@@ -166,6 +218,9 @@ class ApiController extends ControllerBase {
 
   public function knowledgeCategories(): JsonResponse {
     $data = $this->contentMapperService->collectKnowledgeTerms('field_category', TRUE);
+    if (!$data) {
+      return $this->jsonFixtureResponse('knowledgeCategories');
+    }
 
     return new JsonResponse([
       'message' => 'success',
@@ -175,6 +230,9 @@ class ApiController extends ControllerBase {
 
   public function knowledgeTopics(): JsonResponse {
     $data = $this->contentMapperService->collectKnowledgeTerms('field_topic', FALSE);
+    if (!$data) {
+      return $this->jsonFixtureResponse('knowledgeTopics');
+    }
 
     return new JsonResponse([
       'message' => 'success',
@@ -184,6 +242,10 @@ class ApiController extends ControllerBase {
 
   public function knowledgeRelatedNews(Request $request): JsonResponse {
     $node = $this->resolveKnowledgeNode($request);
+    if (!$node) {
+      return $this->jsonFixtureResponse('knowledgeRelatedNews');
+    }
+
     $data = $node ? $this->contentMapperService->mapKnowledgeRelatedNews($node) : [];
 
     return new JsonResponse([
@@ -231,6 +293,11 @@ class ApiController extends ControllerBase {
   }
 
   public function placeholderList(string $key): JsonResponse {
+    $fixture = $this->loadJsonFixture($key);
+    if ($fixture !== NULL) {
+      return new JsonResponse($fixture);
+    }
+
     return new JsonResponse([
       'message' => 'success!',
       'key' => $key,
@@ -239,6 +306,11 @@ class ApiController extends ControllerBase {
   }
 
   public function placeholderObject(string $key): JsonResponse {
+    $fixture = $this->loadJsonFixture($key);
+    if ($fixture !== NULL) {
+      return new JsonResponse($fixture);
+    }
+
     return new JsonResponse([
       'message' => 'success!',
       'key' => $key,
@@ -257,6 +329,87 @@ class ApiController extends ControllerBase {
 
     $nodes = $this->loadNodesByType('qb_knowledge', 1);
     return $nodes[0] ?? NULL;
+  }
+
+  protected function jsonFixtureResponse(string $key): JsonResponse {
+    $fixture = $this->loadJsonFixture($key);
+
+    if ($fixture !== NULL) {
+      return new JsonResponse($fixture);
+    }
+
+    return new JsonResponse([
+      'message' => 'success!',
+      'key' => $key,
+      'data' => [],
+    ]);
+  }
+
+  protected function loadJsonFixture(string $key): ?array {
+    $map = [
+      'banners' => 'banners.json',
+      'services' => 'services.json',
+      'marketing' => 'marketing.json',
+      'packages' => 'packages.json',
+      'theme' => 'theme.json',
+      'wpfeatured' => 'wp-featured.json',
+      'wpwhy' => 'wp-why.json',
+      'partners' => 'partners.json',
+      'testimonials' => 'testimonials.json',
+      'faqs' => 'designweb-faq.json',
+      'wpfaq' => 'wp-faq.json',
+      'knowledgeList' => 'knowledge-list.json',
+      'knowledgeDetail' => 'knowledge-detail.json',
+      'knowledgeCategories' => 'knowledge-categories.json',
+      'knowledgeTopics' => 'knowledge-topics.json',
+      'knowledgeRelatedNews' => 'knowledge-related-news.json',
+      'featured' => 'featured.json',
+      'blockhome' => 'blockhome.json',
+      'introductionHome' => 'abouthome.json',
+      'benefits' => 'designweb-benefits.json',
+      'solutions' => 'designweb-solutions.json',
+      'processes' => 'designweb-process.json',
+      'commitments' => 'designweb-commitment.json',
+      'reasonses' => 'designweb-reasons.json',
+      'bannerKnowledge' => 'banner-knowledge.json',
+      'marketingHome' => 'marketingHome.json',
+      'seoIntro' => 'seo-intro.json',
+      'seoDefinition' => 'seo-definition.json',
+      'seoServices' => 'seo-services.json',
+      'seoPricing' => 'seo-pricing.json',
+      'seoProcess' => 'seo-process.json',
+      'seoCommitment' => 'seo-commitment.json',
+      'seoContactForm' => 'seo-contact-form.json',
+      'bannerAbout' => 'banner-about.json',
+      'aboutContent' => 'about-content.json',
+      'aboutMission' => 'about-mission.json',
+      'aboutWhy' => 'about-why.json',
+      'facebookBenefits' => 'facebook-benefits.json',
+      'facebookServices' => 'facebook-services.json',
+      'facebookDisparity' => 'facebook-disparity.json',
+      'facebookProcess' => 'facebook-process.json',
+      'googleAdsFeatures' => 'google-ads-features.json',
+      'googleAdsStrategies' => 'google-ads-strategies.json',
+      'googleAdsProcess' => 'google-ads-process.json',
+      'googleAdsCommitment' => 'google-ads-commitment.json',
+    ];
+
+    if (!isset($map[$key])) {
+      return NULL;
+    }
+
+    $path = \Drupal::root() . '/vue/data/' . $map[$key];
+    if (!is_file($path)) {
+      return NULL;
+    }
+
+    $content = file_get_contents($path);
+    if ($content === FALSE) {
+      return NULL;
+    }
+
+    $decoded = json_decode($content, TRUE);
+    return is_array($decoded) ? $decoded : NULL;
   }
 
   /**

@@ -1,0 +1,7 @@
+services:
+  thietkeasea_vue_api.demo_import_commands:
+    class: Drupal\thietkeasea_vue_api\Drush\Commands\DemoImportCommands
+    arguments:
+      - '@thietkeasea_vue_api.demo_content_importer'
+    tags:
+      - { name: drush.command }
