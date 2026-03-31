@@ -258,6 +258,9 @@ class VueAppController extends ControllerBase {
       'knowledgeCategories' => Url::fromRoute('thietkeasea_vue_api.knowledge_categories')->toString(),
       'knowledgeTopics' => Url::fromRoute('thietkeasea_vue_api.knowledge_topics')->toString(),
       'knowledgeRelatedNews' => Url::fromRoute('thietkeasea_vue_api.knowledge_related_news')->toString(),
+      'knowledgeRelatedPosts' => Url::fromRoute('thietkeasea_vue_api.knowledge_related_posts')->toString(),
+      'knowledgeComments' => Url::fromRoute('thietkeasea_vue_api.knowledge_comments')->toString(),
+      'knowledgeCommentSubmit' => Url::fromRoute('thietkeasea_vue_api.knowledge_comment_submit')->toString(),
     ];
 
     foreach ($listPlaceholderKeys as $key) {

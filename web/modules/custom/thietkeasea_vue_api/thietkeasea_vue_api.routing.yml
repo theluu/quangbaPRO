@@ -134,6 +134,31 @@ thietkeasea_vue_api.knowledge_related_news:
   requirements:
     _permission: 'access content'
 
+thietkeasea_vue_api.knowledge_related_posts:
+  path: '/api/v1/knowledge-related-posts'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::knowledgeRelatedPosts'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.knowledge_comments:
+  path: '/api/v1/knowledge-comments'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::knowledgeComments'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+thietkeasea_vue_api.knowledge_comment_submit:
+  path: '/api/v1/knowledge-comments/create'
+  defaults:
+    _controller: '\Drupal\thietkeasea_vue_api\Controller\ApiController::submitKnowledgeComment'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+  methods: [POST]
+
 thietkeasea_vue_api.navigation:
   path: '/api/v1/navigation'
   defaults:

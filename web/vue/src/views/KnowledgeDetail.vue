@@ -16,6 +16,7 @@
             </div>
             <KnowledgeRelatedPosts :items="relatedPosts" />
             <KnowledgeComments :items="comments" />
+            <KnowledgeCommentForm :nid="numericId" @submitted="handleCommentSubmitted" />
         </div>
         <KnowledgeTopics :items="topics" />
     </div>
@@ -24,26 +25,27 @@
 
 <script setup>
 import { useRoute } from 'vue-router';
-import { ref, onMounted, computed } from "vue";
+import { ref, onMounted, computed, watch } from "vue";
 import axios from "axios";
 import KnowledgeTopics from '@/components/knowledge/KnowledgeTopics.vue';
 import KnowledgeDetailComponent from '@/components/knowledge/KnowledgeDetail.vue';
 import RelatedNews from '@/components/knowledge/RelatedNews.vue';
 import KnowledgeRelatedPosts from '@/components/knowledge/KnowledgeRelatedPosts.vue';
 import KnowledgeComments from '@/components/knowledge/KnowledgeComments.vue';
+import KnowledgeCommentForm from '@/components/knowledge/KnowledgeCommentForm.vue';
 import Breadcrumb from '@/components/Breadcrumb.vue';
 import { useAuthStore } from "@/store.js";
 
 const authStore = useAuthStore();
 const route = useRoute();
-// eslint-disable-next-line
 const id = computed(() => route.params.id);
+const numericId = computed(() => Number.parseInt(id.value, 10) || 0);
 
 const breadcrumbs = computed(() => [
     { text: 'Trang chủ', to: '/' },
     { text: 'Kiến thức', to: '/knowledge' },
-    { text: 'Kiến thức SEO', to: '/knowledge' },
-    { text: 'Perplexity là gì? 8 tính năng thông minh cần biết', to: '' }
+    { text: knowledgeDetail.value?.categories?.[0]?.title || 'Chi tiết bài viết', to: '/knowledge' },
+    { text: knowledgeDetail.value?.title || '', to: '' }
 ]);
 
 const topics = ref([]);
@@ -56,26 +58,26 @@ const comments = ref([]);
 const fetchData = async () => {
   try {
     const endpoint = authStore.config?.endpoint || {};
+    const params = numericId.value ? { nid: numericId.value } : {};
 
-    // Fetch data song song để tối ưu performance
-    const [topicsResponse, detailResponse, relatedResponse, relatedPostsResponse, commentsResponse] = await Promise.all([
+    const [topicsResponse, detailResponse, latestResponse, relatedPostsResponse, commentsResponse] = await Promise.all([
       axios.get(endpoint.knowledgeTopics).catch(err => {
         console.error("Error fetching topics:", err);
         return { data: { data: [] } };
       }),
-      axios.get(endpoint.knowledgeDetail).catch(err => {
+      axios.get(endpoint.knowledgeDetail, { params }).catch(err => {
         console.error("Error fetching details:", err);
         return { data: { data: {} } };
       }),
-      axios.get(endpoint.knowledgeRelatedNews).catch(err => {
-        console.error("Error fetching related news:", err);
+      axios.get(endpoint.knowledgeRelatedNews, { params }).catch(err => {
+        console.error("Error fetching latest news:", err);
         return { data: { data: [] } };
       }),
-      axios.get('/data/relate-news.json').catch(err => {
+      axios.get(endpoint.knowledgeRelatedPosts, { params }).catch(err => {
         console.error("Error fetching related posts:", err);
         return { data: { data: [] } };
       }),
-      axios.get('/data/knowledge-comments.json').catch(err => {
+      axios.get(endpoint.knowledgeComments, { params }).catch(err => {
         console.error("Error fetching comments:", err);
         return { data: { data: [] } };
       }),
@@ -83,17 +85,29 @@ const fetchData = async () => {
 
     topics.value = topicsResponse.data.data || [];
     knowledgeDetail.value = detailResponse.data.data || {};
-    relatedNews.value = relatedResponse.data.data || [];
+    relatedNews.value = latestResponse.data.data || [];
     relatedPosts.value = relatedPostsResponse.data.data || [];
     comments.value = commentsResponse.data.data || [];
+    knowledgeDetail.value.comments = commentsResponse.data.count ?? knowledgeDetail.value.comments ?? 0;
 
   } catch (error) {
     console.error("Error fetching data:", error);
   }
 };
 
-// Gọi hàm fetchData khi component được mount
+const handleCommentSubmitted = ({ comments: nextComments, count }) => {
+  comments.value = nextComments || [];
+  knowledgeDetail.value = {
+    ...knowledgeDetail.value,
+    comments: count ?? nextComments?.length ?? 0,
+  };
+};
+
 onMounted(() => {
+  fetchData();
+});
+
+watch(() => route.params.id, () => {
   fetchData();
 });
 </script>

@@ -210,6 +210,8 @@ class ApiController extends ControllerBase {
     }
 
     $data = $node ? $this->contentMapperService->mapKnowledgeDetailNode($node) : [];
+    $comments = $this->loadKnowledgeComments((int) $node->id());
+    $data['comments'] = $this->countComments($comments);
 
     return new JsonResponse([
       'data' => $data,
@@ -246,11 +248,95 @@ class ApiController extends ControllerBase {
       return $this->jsonFixtureResponse('knowledgeRelatedNews');
     }
 
-    $data = $node ? $this->contentMapperService->mapKnowledgeRelatedNews($node) : [];
+    $data = $node ? $this->contentMapperService->mapKnowledgeLatestNews($node, 5) : [];
 
     return new JsonResponse([
       'message' => 'success',
       'data' => $data,
+    ]);
+  }
+
+  public function knowledgeRelatedPosts(Request $request): JsonResponse {
+    $node = $this->resolveKnowledgeNode($request);
+    if (!$node) {
+      return new JsonResponse([
+        'message' => 'success',
+        'data' => [],
+      ]);
+    }
+
+    $data = $this->contentMapperService->mapKnowledgeRelatedNews($node);
+
+    return new JsonResponse([
+      'message' => 'success',
+      'data' => $data,
+    ]);
+  }
+
+  public function knowledgeComments(Request $request): JsonResponse {
+    $node = $this->resolveKnowledgeNode($request);
+    if (!$node) {
+      return new JsonResponse([
+        'message' => 'success',
+        'data' => [],
+        'count' => 0,
+      ]);
+    }
+
+    $data = $this->loadKnowledgeComments((int) $node->id());
+
+    return new JsonResponse([
+      'message' => 'success',
+      'data' => $data,
+      'count' => $this->countComments($data),
+    ]);
+  }
+
+  public function submitKnowledgeComment(Request $request): JsonResponse {
+    $payload = json_decode($request->getContent(), TRUE);
+    $payload = is_array($payload) ? $payload : [];
+    $nid = isset($payload['nid']) ? (int) $payload['nid'] : 0;
+    $node = $nid > 0 ? $this->entityTypeManagerService->getStorage('node')->load($nid) : NULL;
+
+    if (!$node instanceof NodeInterface || $node->bundle() !== 'qb_knowledge' || !$node->isPublished()) {
+      return new JsonResponse([
+        'message' => 'Bai viet khong ton tai.',
+      ], 404);
+    }
+
+    $name = trim((string) ($payload['name'] ?? ''));
+    $content = trim((string) ($payload['content'] ?? ''));
+
+    if ($name === '' || mb_strlen($name) < 2) {
+      return new JsonResponse([
+        'message' => 'Vui long nhap ho ten hop le.',
+      ], 422);
+    }
+
+    if ($content === '' || mb_strlen($content) < 3) {
+      return new JsonResponse([
+        'message' => 'Vui long nhap noi dung binh luan.',
+      ], 422);
+    }
+
+    $comments = $this->loadKnowledgeComments((int) $node->id());
+    $comments[] = [
+      'id' => $this->generateCommentId($comments),
+      'name' => $name,
+      'date' => date('d/m/Y'),
+      'content' => $content,
+      'avatar' => '',
+      'role' => 'user',
+      'replies' => [],
+    ];
+
+    $this->saveKnowledgeComments((int) $node->id(), $comments);
+    $this->updateKnowledgeCommentCount($node, $comments);
+
+    return new JsonResponse([
+      'message' => 'success',
+      'data' => $comments,
+      'count' => $this->countComments($comments),
     ]);
   }
 
@@ -331,6 +417,75 @@ class ApiController extends ControllerBase {
     return $nodes[0] ?? NULL;
   }
 
+  protected function loadKnowledgeComments(int $nid): array {
+    $path = $this->getKnowledgeCommentsPath($nid);
+
+    if (is_file($path)) {
+      $content = file_get_contents($path);
+      $decoded = $content !== FALSE ? json_decode($content, TRUE) : NULL;
+      if (is_array($decoded)) {
+        return $decoded;
+      }
+    }
+
+    $fixture = $this->loadJsonFixture('knowledgeComments');
+    return is_array($fixture['data'] ?? NULL) ? $fixture['data'] : [];
+  }
+
+  protected function saveKnowledgeComments(int $nid, array $comments): void {
+    $directory = dirname($this->getKnowledgeCommentsPath($nid));
+    if (!is_dir($directory)) {
+      mkdir($directory, 0775, TRUE);
+    }
+
+    file_put_contents(
+      $this->getKnowledgeCommentsPath($nid),
+      json_encode(array_values($comments), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)
+    );
+  }
+
+  protected function getKnowledgeCommentsPath(int $nid): string {
+    return \Drupal::root() . '/sites/default/files/knowledge-comments/' . $nid . '.json';
+  }
+
+  protected function countComments(array $comments): int {
+    $count = 0;
+
+    foreach ($comments as $comment) {
+      $count++;
+      if (!empty($comment['replies']) && is_array($comment['replies'])) {
+        $count += $this->countComments($comment['replies']);
+      }
+    }
+
+    return $count;
+  }
+
+  protected function generateCommentId(array $comments): int {
+    $ids = [];
+
+    $walker = function (array $items) use (&$ids, &$walker): void {
+      foreach ($items as $item) {
+        if (isset($item['id'])) {
+          $ids[] = (int) $item['id'];
+        }
+        if (!empty($item['replies']) && is_array($item['replies'])) {
+          $walker($item['replies']);
+        }
+      }
+    };
+
+    $walker($comments);
+    return $ids ? max($ids) + 1 : 1;
+  }
+
+  protected function updateKnowledgeCommentCount(NodeInterface $node, array $comments): void {
+    if ($node->hasField('field_comment_count')) {
+      $node->set('field_comment_count', $this->countComments($comments));
+      $node->save();
+    }
+  }
+
   protected function jsonFixtureResponse(string $key): JsonResponse {
     $fixture = $this->loadJsonFixture($key);
 
@@ -363,6 +518,7 @@ class ApiController extends ControllerBase {
       'knowledgeCategories' => 'knowledge-categories.json',
       'knowledgeTopics' => 'knowledge-topics.json',
       'knowledgeRelatedNews' => 'knowledge-related-news.json',
+      'knowledgeComments' => 'knowledge-comments.json',
       'featured' => 'featured.json',
       'blockhome' => 'blockhome.json',
       'introductionHome' => 'abouthome.json',

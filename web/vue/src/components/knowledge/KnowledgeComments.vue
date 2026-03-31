@@ -3,6 +3,9 @@
     <KnowledgeSectionTitle icon="fa-regular fa-message-dots" title="Cảm nhận về bài viết" />
     
     <div class="comment-list">
+      <div v-if="!items.length" class="comment-empty">
+        Chưa có bình luận nào cho bài viết này.
+      </div>
       <div v-for="comment in items" :key="comment.id" class="comment-item-group">
         <CommentItem :comment="comment" />
         
@@ -40,6 +43,10 @@ const props = defineProps({
 .comment-list {
     border-top: 1px solid $grey-6;
     padding-top: 24px;
+}
+
+.comment-empty {
+    color: $grey-5;
 }
 .comment-item-group {
     margin-bottom: 24px;

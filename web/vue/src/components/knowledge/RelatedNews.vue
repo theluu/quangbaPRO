@@ -11,8 +11,8 @@
             <h4 class="news-title">
               <RouterLink :to="{ name: 'knowledge-detail', params: { id: news.id }}">{{ news.title }}</RouterLink>
             </h4>
-            <div class="news-date"><i class="fa-light fa-calendar-days"></i> {{ news.date }}</div>
-            <div v-if="index === 0" class="news-desc">{{ news.description }}</div>
+            <div class="news-date"><i class="fa-light fa-calendar-days"></i> {{ news.createdDate || news.date }}</div>
+            <div v-if="index === 0" class="news-desc">{{ news.desc || news.description }}</div>
           </div>
         </div>
       </div>

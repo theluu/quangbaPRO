@@ -1,7 +1,8 @@
 <template>
   <div class="comment-item">
     <div class="comment-avatar">
-      <img :src="getImgUrl('../../../src/assets/images/avatars', comment.avatar)" :alt="comment.name" />
+      <img v-if="comment.avatar" :src="getImgUrl('../../../src/assets/images/avatars', comment.avatar)" :alt="comment.name" />
+      <span v-else>{{ initials }}</span>
     </div>
     <div class="comment-content">
       <div class="comment-meta d-flex align-items-center">
@@ -17,7 +18,7 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { computed, defineProps } from 'vue';
 import getImgUrl from '@/utils/getUrlImg';
 
 const props = defineProps({
@@ -25,6 +26,15 @@ const props = defineProps({
     type: Object,
     required: true
   }
+});
+
+const initials = computed(() => {
+  return (props.comment?.name || '')
+    .split(' ')
+    .filter(Boolean)
+    .slice(0, 2)
+    .map(part => part.charAt(0).toUpperCase())
+    .join('') || 'U';
 });
 </script>
 
@@ -52,6 +62,18 @@ const props = defineProps({
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+  }
+
+  span {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $primary-1;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
   }
   
   @include breakpoint("md") {

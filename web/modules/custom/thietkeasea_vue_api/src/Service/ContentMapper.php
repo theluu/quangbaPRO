@@ -48,6 +48,21 @@ class ContentMapper {
     ];
   }
 
+  public function mapKnowledgeCardNode(NodeInterface $node): array {
+    [$thumbnailUrl] = $this->extractImageData($node, ['field_thumbnail', 'field_image']);
+
+    return [
+      'id' => (int) $node->id(),
+      'slug' => $this->getAlias($node),
+      'src' => $thumbnailUrl,
+      'title' => $node->label(),
+      'createdDate' => $this->dateFormatter->format($node->getCreatedTime(), 'custom', 'd/m/Y'),
+      'date' => $this->dateFormatter->format($node->getCreatedTime(), 'custom', 'd/m/Y'),
+      'desc' => $this->getText($node, ['field_summary', 'body']),
+      'description' => $this->getText($node, ['field_summary', 'body']),
+    ];
+  }
+
   public function mapServiceNode(NodeInterface $node): array {
     [$imageUrl] = $this->extractImageData($node, ['field_image']);
 
@@ -155,23 +170,38 @@ class ContentMapper {
   }
 
   public function mapKnowledgeRelatedNews(NodeInterface $node): array {
-    if (!$node->hasField('field_related_news') || $node->get('field_related_news')->isEmpty()) {
-      return [];
+    $items = [];
+
+    if ($node->hasField('field_related_news') && !$node->get('field_related_news')->isEmpty()) {
+      foreach ($node->get('field_related_news')->referencedEntities() as $related) {
+        if ($related instanceof NodeInterface && $related->isPublished()) {
+          $items[(int) $related->id()] = $this->mapKnowledgeCardNode($related);
+        }
+      }
     }
 
+    foreach ($this->loadRelatedKnowledgeNodes($node, 3) as $related) {
+      $items[(int) $related->id()] = $this->mapKnowledgeCardNode($related);
+      if (count($items) >= 3) {
+        break;
+      }
+    }
+
+    return array_slice(array_values($items), 0, 3);
+  }
+
+  public function mapKnowledgeLatestNews(?NodeInterface $currentNode = NULL, int $limit = 5): array {
     $items = [];
-    foreach ($node->get('field_related_news')->referencedEntities() as $related) {
-      if (!$related instanceof NodeInterface) {
+
+    foreach ($this->loadPublishedKnowledgeNodes() as $node) {
+      if ($currentNode && (int) $node->id() === (int) $currentNode->id()) {
         continue;
       }
-      [$thumbnailUrl] = $this->extractImageData($related, ['field_thumbnail', 'field_image']);
-      $items[] = [
-        'id' => (int) $related->id(),
-        'slug' => $this->getAlias($related),
-        'src' => $thumbnailUrl,
-        'title' => $related->label(),
-        'date' => $this->dateFormatter->format($related->getCreatedTime(), 'custom', 'd/m/Y'),
-      ];
+
+      $items[] = $this->mapKnowledgeCardNode($node);
+      if (count($items) >= $limit) {
+        break;
+      }
     }
 
     return $items;
@@ -459,6 +489,68 @@ class ContentMapper {
 
     $nodes = $this->entityTypeManager->getStorage('node')->loadMultiple($nids);
     return array_values(array_filter($nodes, fn ($node) => $node instanceof NodeInterface));
+  }
+
+  /**
+   * @return \Drupal\node\NodeInterface[]
+   */
+  protected function loadRelatedKnowledgeNodes(NodeInterface $node, int $limit = 3): array {
+    $candidate_ids = [];
+    $match_ids = [];
+
+    foreach (['field_category', 'field_topic'] as $field_name) {
+      if (!$node->hasField($field_name) || $node->get($field_name)->isEmpty()) {
+        continue;
+      }
+
+      $target_ids = array_map(
+        static fn ($item) => (int) $item['target_id'],
+        $node->get($field_name)->getValue()
+      );
+
+      if (!$target_ids) {
+        continue;
+      }
+
+      $query = $this->entityTypeManager->getStorage('node')->getQuery()
+        ->condition('type', 'qb_knowledge')
+        ->condition('status', 1)
+        ->condition('nid', (int) $node->id(), '<>')
+        ->condition($field_name, $target_ids, 'IN')
+        ->accessCheck(TRUE)
+        ->sort('created', 'DESC')
+        ->range(0, $limit * 2);
+
+      $candidate_ids = array_merge($candidate_ids, array_values($query->execute()));
+    }
+
+    foreach ($candidate_ids as $candidate_id) {
+      $match_ids[(int) $candidate_id] = (int) $candidate_id;
+      if (count($match_ids) >= $limit) {
+        break;
+      }
+    }
+
+    if (count($match_ids) < $limit) {
+      foreach ($this->loadPublishedKnowledgeNodes() as $candidate) {
+        $candidate_id = (int) $candidate->id();
+        if ($candidate_id === (int) $node->id() || isset($match_ids[$candidate_id])) {
+          continue;
+        }
+
+        $match_ids[$candidate_id] = $candidate_id;
+        if (count($match_ids) >= $limit) {
+          break;
+        }
+      }
+    }
+
+    if (!$match_ids) {
+      return [];
+    }
+
+    $nodes = $this->entityTypeManager->getStorage('node')->loadMultiple(array_values($match_ids));
+    return array_values(array_filter($nodes, fn ($candidate) => $candidate instanceof NodeInterface));
   }
 
 }
