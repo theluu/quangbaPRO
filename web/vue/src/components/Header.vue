@@ -240,15 +240,15 @@
                  <div class="trends-section text-center">
                    <h6 class="fw-bold mb-3 text-uppercase text-muted">Xu hướng tìm kiếm:</h6>
                    <div class="d-flex flex-wrap justify-content-center gap-2">
-                     <a 
-                       v-for="(tag, index) in searchTags" 
-                       :key="index" 
-                       href="#" 
-                       @click.prevent="applySearchTag(tag)"
+                     <RouterLink
+                       v-for="(tag, index) in searchTags"
+                       :key="index"
+                       :to="getSearchRoute(tag)"
+                       @click="applySearchTag(tag)"
                        class="search-tag text-decoration-none"
                      >
                        {{ tag }}
-                     </a>
+                     </RouterLink>
                    </div>
                  </div>
             </div>
@@ -274,15 +274,15 @@
             <div class="trends-section text-center">
               <h6 class="fw-bold mb-3 text-uppercase">Xu hướng tìm kiếm:</h6>
               <div class="d-flex flex-wrap justify-content-center gap-2">
-                <a 
-                  v-for="(tag, index) in searchTags" 
-                  :key="index" 
-                  href="#" 
-                  @click.prevent="applySearchTag(tag)"
+                <RouterLink
+                  v-for="(tag, index) in searchTags"
+                  :key="index"
+                  :to="getSearchRoute(tag)"
+                  @click="applySearchTag(tag)"
                   class="search-tag text-decoration-none"
                 >
                   {{ tag }}
-                </a>
+                </RouterLink>
               </div>
             </div>
           </div>
@@ -361,6 +361,8 @@ export default defineComponent({
     submitSearch() {
       const keyword = this.searchKeyword.trim();
       this.isSearchOpen = false;
+      this.isMobileMenuOpen = false;
+      this.activeSubmenu = null;
       if (!keyword) {
         this.$router.push({ name: 'search' });
         return;
@@ -372,7 +374,15 @@ export default defineComponent({
     },
     applySearchTag(tag) {
       this.searchKeyword = tag;
-      this.submitSearch();
+      this.isSearchOpen = false;
+      this.isMobileMenuOpen = false;
+      this.activeSubmenu = null;
+    },
+    getSearchRoute(tag) {
+      return {
+        name: 'search',
+        query: { q: tag },
+      };
     }
   }
 });
