@@ -3,10 +3,10 @@
   "data": 
     {
       "id": 1,
-      "src": "introduction.png",
+      "src": "/vue/src/assets/images/introduction/introduction.png",
       "title": "Nâng tầm thương hiệu - Bứt phá doanh thu",
       "text": "Thiết Kế Website Chuyên Nghiệp  Tăng độ nhận diện thương hiệu của bạn với website chuyên nghiệp, đẹp mắt và chuẩn SEO. Quangbapro cung cấp các dịch vụ trọn gói dành cho website của bạn...",
-      "srcLogo": "logo.svg",
+      "srcLogo": "/vue/src/assets/images/introduction/logo.svg",
       "points": [
         {
           "iconClass": "ico-global",
