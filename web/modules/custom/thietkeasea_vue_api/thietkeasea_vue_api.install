@@ -1,0 +1,28 @@
+<?php
+
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+
+/**
+ * Create field_icon on qb_knowledge_topic and qb_knowledge_category.
+ */
+function thietkeasea_vue_api_update_8001(): void {
+  if (!FieldStorageConfig::loadByName('taxonomy_term', 'field_icon')) {
+    FieldStorageConfig::create([
+      'field_name' => 'field_icon',
+      'entity_type' => 'taxonomy_term',
+      'type' => 'image',
+      'cardinality' => 1,
+    ])->save();
+  }
+
+  foreach (['qb_knowledge_topic', 'qb_knowledge_category'] as $bundle) {
+    if (!FieldConfig::loadByName('taxonomy_term', $bundle, 'field_icon')) {
+      FieldConfig::create([
+        'field_storage' => FieldStorageConfig::loadByName('taxonomy_term', 'field_icon'),
+        'bundle' => $bundle,
+        'label' => 'Icon',
+      ])->save();
+    }
+  }
+}
