@@ -1,7 +1,7 @@
 <template>
   <div class="comment-item">
     <div class="comment-avatar">
-      <img v-if="comment.avatar" :src="getImgUrl('../../../src/assets/images/avatars', comment.avatar)" :alt="comment.name" />
+      <img v-if="comment.avatar" :src="`/vue/src/assets/images/avatars/${comment.avatar}`" :alt="comment.name" />
       <span v-else>{{ initials }}</span>
     </div>
     <div class="comment-content">
@@ -19,7 +19,6 @@
 
 <script setup>
 import { computed, defineProps } from 'vue';
-import getImgUrl from '@/utils/getUrlImg';
 
 const props = defineProps({
   comment: {

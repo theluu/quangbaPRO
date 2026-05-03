@@ -12,9 +12,5 @@ export default function getImgUrl(root, path) {
     return path
   }
 
-  // import.meta.url is always relative to this file (src/utils/).
-  // Strip any leading "../" segments and optional "src/" prefix from root,
-  // then resolve correctly from src/utils/ → ../assets/...
-  const normalizedRoot = root.replace(/^(\.\.\/)*(?:src\/)?/, '')
-  return new URL(`../${normalizedRoot}/${path}`, import.meta.url).href
+  return new URL(`${root}/${path}`, import.meta.url).href
 }
