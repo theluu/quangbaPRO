@@ -20,9 +20,7 @@
               <div class="why-item" v-for="item in props.items" :key="item.id">
                 <div class="why-icon">
                   <img
-                    :src="
-                      getImgUrl('../../../src/assets/images/themes', item.icon)
-                    "
+                    :src="getIconSrc(item)"
                     :alt="item.title"
                   />
                 </div>
@@ -43,12 +41,23 @@
 import { defineProps } from "vue";
 import getImgUrl from "@/utils/getUrlImg";
 
+const themeImages = import.meta.glob(
+  "../../assets/images/themes/*.png",
+  { eager: true, query: "?url", import: "default" }
+);
+
 const props = defineProps({
   items: {
     type: Array,
     default: () => [],
   },
 });
+
+function getIconSrc(item) {
+  if (item.src) return getImgUrl("", item.src);
+  if (!item.icon) return "";
+  return themeImages[`../../assets/images/themes/${item.icon}`] || "";
+}
 </script>
 
 <style lang="scss" scoped>
